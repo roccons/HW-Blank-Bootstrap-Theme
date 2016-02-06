@@ -14,7 +14,6 @@ I created this theme from the Bootstrap Starter Wordpress theme by 3sparks, as a
 
 ###Header file includes
 * Bootstrap css and js plus responsive
-* Jquery js from google api
 * Menu
 
 ###Index file includes
