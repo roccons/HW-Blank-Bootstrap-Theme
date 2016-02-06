@@ -41,6 +41,9 @@ function theme_register_sidebar() {
 	}
 }
 
+// Let WordPress manage the document title
+add_theme_support( 'title-tag' );
+
 // Bootstrap_Walker_Nav_Menu setup
 
 add_action( 'after_setup_theme', 'bootstrap_setup' );
