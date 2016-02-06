@@ -1,8 +1,9 @@
 #blank-bootstrap-gulp-sass-wp-theme
 Based on
-https://github.com/sebastienb/Bootstrap-3-blank-wordpress-theme
+[Bootstrap-3-blank-wordpress-theme](https://github.com/sebastienb/Bootstrap-3-blank-wordpress-theme)
 
-I created this theme from the Bootstrap Starter Wordpress theme by 3sparks, as a starting point for my theme development, feel free to use it for your new projects. 
+I created this theme from the Bootstrap 3 Starter Wordpress theme by 3sparks as a starting point for my theme development. It adds **Gulp** and **Sass** support and fixes some issues found in the source theme. **It's aim is to be as simple and small as possible.** Contributions in the direction of having a cleaner theme would be greately welcome!
+
 
 ###Instructions
 * [Download the Bootrstap Sass version](http://getbootstrap.com/getting-started/#download) and put it in the src/ directory
@@ -12,17 +13,9 @@ I created this theme from the Bootstrap Starter Wordpress theme by 3sparks, as a
 * To optimize your final Bootstrap css comment in _bootstrap.css all the components you're not using
 
 
-###Header file includes
-* Bootstrap css and js plus responsive
-* Menu
-
-###Index file includes
-* Main Wp loop
-* Sidebar
-
 ###Function file include
-* Post thumbnails
 * Menu Support
-* registered sidebar
-* Gravity forms submit button bootstrap btn class
-
+* Post thumbnails (not tested yet)
+* 1 registered sidebar (was broken, now it's working)
+* Theme options for storing Social Links (not tested yet)
+* Gravity forms submit button bootstrap btn class (not tested yet)

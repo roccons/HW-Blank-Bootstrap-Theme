@@ -3,7 +3,7 @@
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
-add_theme_support( 'automatic-feed-links' );
+//add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'title-tag' );
 
 //Add content width (desktop default)
@@ -32,7 +32,7 @@ add_action('widgets_init', 'theme_register_sidebar');
 function theme_register_sidebar() {
 	if ( function_exists('register_sidebar') ) {
 		register_sidebar(array(
-			'id' => 'sidebar-1',
+		    'id' => 'sidebar-1',
 		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		    'after_widget' => '</div>',
 		    'before_title' => '<h4>',
@@ -40,9 +40,6 @@ function theme_register_sidebar() {
 		 ));
 	}
 }
-
-// Let WordPress manage the document title
-add_theme_support( 'title-tag' );
 
 // Bootstrap_Walker_Nav_Menu setup
 
