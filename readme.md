@@ -2,13 +2,13 @@
 Based on
 https://github.com/sebastienb/Bootstrap-3-blank-wordpress-theme
 
-I created this theme from the Bootstrap tarter Wordpress theme by 3sparks, as a starting point for my theme development, feel free to use it for your new projects. 
+I created this theme from the Bootstrap Starter Wordpress theme by 3sparks, as a starting point for my theme development, feel free to use it for your new projects. 
 
 ###Instructions
-* Clone the Bootrstap Sass version inside the src/ directory
+* [Download the Bootrstap Sass version](http://getbootstrap.com/getting-started/#download) and put it in the src/ directory
 * Update the path to the _bootstrap.scss file in css/bootstrap.scss
 * Run `gulp` to start watching your files. Use the livereload browser extension to have your browser automatically refreshed.
-* To use the bootstrap variables you can edit the original _variables.scss or use any of them directly in your css/bootstrap.scss file, just before the @import. This way you can keep your variables if you update your bootstrap version
+* To use the bootstrap variables you can edit the original _variables.scss or use any of them directly in your css/bootstrap.scss file, just before the `@import. This way you can keep your variables if you update your bootstrap version
 * To optimize your final Bootstrap css comment in _bootstrap.css all the components you're not using
 
 
