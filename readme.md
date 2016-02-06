@@ -11,7 +11,7 @@ I created this theme from the Bootstrap 3 Starter Wordpress theme by 3sparks as 
 * Run `gulp` to start watching your files. Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
 
 ###To customize Bootstrap
-* To use the bootstrap variables you can edit the original _variables.scss or use any of them directly in your css/bootstrap.scss file, just before the `@import`. This way you can keep your variables if you update your bootstrap version.
+* To use the bootstrap variables you can edit the original /assets/stylesheets/bootstrap/_variables.scss or use any of them directly in your css/bootstrap.scss file, just before the `@import`. This way you can keep your variables if you update your bootstrap version.
 * To optimize your final Bootstrap css, comment in _bootstrap.css all the components you're not using.
 
 
