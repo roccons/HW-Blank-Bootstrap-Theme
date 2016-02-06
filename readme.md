@@ -13,9 +13,12 @@ I created this theme from the Bootstrap 3 Starter Wordpress theme by 3sparks as 
 * To optimize your final Bootstrap css, comment in _bootstrap.css all the components you're not using
 
 
-###Function file include
+###Function file includes
 * Menu Support
 * Post thumbnails (not tested yet)
 * 1 registered sidebar (was broken, now it's working)
 * Theme options for storing Social Links (not tested yet)
 * Gravity forms submit button bootstrap btn class (not tested yet)
+
+###Known issues
+* Menu doesn't work correctly with 3 or more levels of depth
