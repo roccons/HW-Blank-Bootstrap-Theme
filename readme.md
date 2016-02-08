@@ -18,7 +18,7 @@ I created this theme from the Bootstrap 3 Starter Wordpress theme by 3sparks as 
 ###Function file includes
 * Menu Support
 * 1 registered sidebar
-* Theme options for storing Social Links
+* Theme options for storing Social Links (and helper function to show them)
 * Post thumbnails (not tested yet)
 * Gravity forms submit button bootstrap btn class (not tested yet)
 
