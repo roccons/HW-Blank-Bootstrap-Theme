@@ -225,19 +225,6 @@ function pu_register_settings()
 
     $field_args = array(
       'type'      => 'text',
-      'id'        => 'gplus_link',
-      'name'      => 'gplus_link',
-      'desc'      => 'Google+ Link - Example: http://plus.google.com/user_id',
-      'std'       => '',
-      'label_for' => 'gplus_link',
-      'class'     => 'css_class'
-    );
-
-    // Add Google+ field
-    add_settings_field( 'gplus_link', 'Google+', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
-
-    $field_args = array(
-      'type'      => 'text',
       'id'        => 'youtube_link',
       'name'      => 'youtube_link',
       'desc'      => 'Youtube Link - Example: https://www.youtube.com/channel/channel_id',
@@ -248,19 +235,6 @@ function pu_register_settings()
 
     // Add youtube field
     add_settings_field( 'youtube_ink', 'Youtube', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
-
-    $field_args = array(
-      'type'      => 'text',
-      'id'        => 'linkedin_link',
-      'name'      => 'linkedin_link',
-      'desc'      => 'LinkedIn Link - Example: http://linkedin.com/in/username',
-      'std'       => '',
-      'label_for' => 'linkedin_link',
-      'class'     => 'css_class'
-    );
-
-    // Add LinkedIn field
-    add_settings_field( 'linkedin_link', 'LinkedIn', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
 
     $field_args = array(
       'type'      => 'text',
@@ -275,25 +249,6 @@ function pu_register_settings()
     // Add Instagram field
     add_settings_field( 'instagram_link', 'Instagram', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
 
-    // Add settings section title here
-    add_settings_section( 'section_name_here', 'Section Title Here', 'pu_display_section', 'pu_theme_options.php' );
-    
-    // Create textarea field
-    $field_args = array(
-      'type'      => 'textarea',
-      'id'        => 'settings_field_1',
-      'name'      => 'settings_field_1',
-      'desc'      => 'Setting Description Here',
-      'std'       => '',
-      'label_for' => 'settings_field_1'
-    );
-
-    // section_name should be same as section_name above (line 116)
-    add_settings_field( 'settings_field_1', 'Setting Title Here', 'pu_display_setting', 'pu_theme_options.php', 'section_name_here', $field_args );   
-
-
-    // Copy lines 118 through 129 to create additional field within that section
-    // Copy line 116 for a new section and then 118-129 to create a field in that section
 }
 
 
