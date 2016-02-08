@@ -6,7 +6,7 @@ var notify       = require('gulp-notify');
 var concat       = require('gulp-concat');
 var livereload   = require('gulp-livereload');
 
-gulp.task('html', function() {
+gulp.task('php', function() {
   gulp.src('index.php')
   .pipe(livereload())
   .pipe(notify({ message : "html"}));
@@ -34,7 +34,7 @@ gulp.task('sass', function () {
 /* WATCH */
 gulp.task('watch', function () {
   livereload.listen({ start:true });
-  //gulp.watch(['**/*.html','**/*.php'], ['html']);
+  gulp.watch(['./*.php'], ['php']);
   gulp.watch(['src/bootstrap*/**/*.s*ss'], ['bootstrapcss']);
   gulp.watch(['css/bootrstap.scss'], ['bootstrapcss']);
   gulp.watch(['css/index.scss'], ['sass']);
