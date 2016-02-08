@@ -251,6 +251,17 @@ function pu_register_settings()
 
 }
 
+// helper for inserting social links
+function social_links($args)
+{
+  $social_links = get_option( 'pu_theme_options' );
+  if($social_links[$args.'_link']) {
+    echo('
+      <a href="'.$social_links[$args.'_link'].'" target="_blank">
+      <img src="' . get_bloginfo('template_url') . '/icons/'.$args.'.svg" >
+      </a>');
+  }
+}
 
 // allow wordpress post editor functions to be used in theme options
 function pu_display_setting($args)
