@@ -36,7 +36,7 @@ gulp.task('watch', function () {
   livereload.listen({ start:true });
   gulp.watch(['./*.php'], ['php']);
   gulp.watch(['src/bootstrap*/**/*.s*ss'], ['bootstrapcss']);
-  gulp.watch(['css/bootrstap.scss'], ['bootstrapcss']);
+  gulp.watch(['css/bootstrap.scss'], ['bootstrapcss']);
   gulp.watch(['css/index.scss'], ['sass']);
 });
 
