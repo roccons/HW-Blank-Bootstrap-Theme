@@ -12,20 +12,10 @@ gulp.task('php', function() {
   .pipe(notify({ message : "html"}));
 })
 
-// compila css de bootstrap
-gulp.task('bootstrapcss', function () {
-  gulp.src('./css/bootstrap.s*ss')
-    .pipe(sass({ indentedSyntax: false, outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(rename('bootstrap.min.css'))
-    .pipe(gulp.dest('./css'))
-    .pipe(livereload())
-    .pipe(notify({ message : "bootstrao css compiled"}));
-});
-
 // compila sass
 gulp.task('sass', function () {
   gulp.src('./css/index.s*ss')
-    .pipe(sass({ indentedSyntax: false }).on('error', sass.logError))
+    .pipe(sass({ indentedSyntax: false, outputStyle: 'compressed'  }).on('error', sass.logError))
     .pipe(gulp.dest('./css'))
     .pipe(livereload())
     .pipe(notify({ message : "sass"}));
@@ -35,9 +25,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
   livereload.listen({ start:true });
   gulp.watch(['./*.php'], ['php']);
-  gulp.watch(['src/bootstrap*/**/*.s*ss'], ['bootstrapcss']);
-  gulp.watch(['css/bootstrap.scss'], ['bootstrapcss']);
-  gulp.watch(['css/index.scss'], ['sass']);
+  gulp.watch(['css/**/*.scss', 'src/bootstrap*/**/*.s*ss'], ['sass']);
 });
 
 /* Default task */

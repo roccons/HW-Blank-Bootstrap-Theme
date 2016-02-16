@@ -1,5 +1,8 @@
 <?php
 
+//disable admin bar
+show_admin_bar(false);
+
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
@@ -344,7 +347,7 @@ function bootstrap_theme_enqueue_scripts() {
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-script', $template_url . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
 
-	wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
+	//wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
 
 	//Main Style
   wp_enqueue_style( 'main-style', $template_url . '/css/index.css' );

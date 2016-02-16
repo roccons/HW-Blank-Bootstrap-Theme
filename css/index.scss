@@ -1,77 +1,36 @@
-/*Wordpress basic styles*/
+/*********** 
+standard bootstrap sizes 
+************/
+$xs: 0;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
 
-.entry-content img {
-  margin: 0 0 1.5em 0;
-  }
-.alignleft, img.alignleft {
-  margin-right: 1.5em;
-  display: inline;
-  float: left;
-  }
-.alignright, img.alignright {
-  margin-left: 1.5em;
-  display: inline;
-  float: right;
-  }
-.aligncenter, img.aligncenter {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  clear: both;
-  }
-.alignnone, img.alignnone {
-  /* not sure about this one */
-  }
-.wp-caption {
-  margin-bottom: 1.5em;
-  text-align: center;
-  padding-top: 5px;
-  }
-.wp-caption img {
-  border: 0 none;
-  padding: 0;
-  margin: 0;
-  }
-.wp-caption p.wp-caption-text {
-  line-height: 1.5;
-  font-size: 10px;
-  margin: 0;
-  }
-.wp-smiley {
-  margin: 0 !important;
-  max-height: 1em;
-  }
-blockquote.left {
-  margin-right: 20px;
-  text-align: right;
-  margin-left: 0;
-  width: 33%;
-  float: left;
-  }
-blockquote.right {
-  margin-left: 20px;
-  text-align: left;
-  margin-right: 0;
-  width: 33%;
-  float: right;
-  }
 
-/* Custom Styles */
+/*********** 
+variables
+here you can set the bootstrap variables that you want
+full variables file is located in 
+../src/bootstrap-sass-version/assets/stylesheets/bootstrap/_variables
+************/
 
+// $font-size-base: 15px;
+// $grid-float-breakpoint: $md;
+
+
+/***********  
+import bootstrap 
+************/
+@import "_fonts.scss"; //add your @font-face definitions here
+@import "../src/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss";
+@import "_wpstyles.scss";
+
+
+/*********** 
+theme styles
+here you can directley add styles or import additional sass files
+feel free to use @extend to apply bootstrap classes and bootstrap variables
+************/
 footer {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  .social {
-    display: inline-block;
-    a {
-      text-decoration: none;
-      display: inline-block;
-      margin-left: 7px; 
-      img {
-        height: 28px;
-      }
-    }
-  }
+  @extend .well;
 }
