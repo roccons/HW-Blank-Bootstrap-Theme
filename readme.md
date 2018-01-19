@@ -6,9 +6,9 @@ I created this theme from the Bootstrap 3 Starter Wordpress theme by 3sparks as 
 
 
 ###Setup
-* [Download the Bootrstap Sass version](http://getbootstrap.com/getting-started/#download) and put it in your theme src/ directory. Alternatively, you can clone it from the [Bootstrap Sass Repository](https://github.com/twbs/bootstrap-sass).
-* Update the path to the src/YOURBOOTSTRAPFOLDER/assets/stylesheets/_bootstrap.scss file in css/bootstrap.scss
-* Run `gulp` to start watching your files. Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
+* After installing WordPress, clone this repository within the themes directory (and rename it as you wish).
+* [Download the Bootrstap Sass version](http://getbootstrap.com/getting-started/#download) and put it in your theme src/ directory and rename the directory as "bootstrap-sass" (without version). Alternatively, you can clone it from the [Bootstrap Sass Repository](https://github.com/twbs/bootstrap-sass).
+* Run `npm install` and then run `gulp` to start watching your files. Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
 
 ###To customize Bootstrap
 * To use the bootstrap variables you can edit the original assets/stylesheets/bootstrap/_variables.scss or use any of them directly in your css/bootstrap.scss file, just before the `@import`. This way you can keep your variables if you update your bootstrap version.

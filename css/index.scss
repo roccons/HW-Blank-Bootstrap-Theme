@@ -11,7 +11,7 @@ $lg: 1200px;
 variables
 here you can set the bootstrap variables that you want
 full variables file is located in 
-../src/bootstrap-sass-version/assets/stylesheets/bootstrap/_variables
+../src/bootstrap-sass/assets/stylesheets/bootstrap/_variables
 ************/
 
 // $font-size-base: 15px;
@@ -22,7 +22,7 @@ full variables file is located in
 import bootstrap 
 ************/
 @import "_fonts.scss"; //add your @font-face definitions here
-@import "../src/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss";
+@import "../src/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "_wpstyles.scss";
 
 
