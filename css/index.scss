@@ -33,4 +33,11 @@ feel free to use @extend to apply bootstrap classes and bootstrap variables
 ************/
 footer {
   @extend .well;
+  margin-bottom: 0;
+}
+.social a {
+	margin-right: 5px;
+	&:hover {
+		text-decoration: none;
+	}
 }
