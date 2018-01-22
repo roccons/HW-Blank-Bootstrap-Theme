@@ -15,13 +15,14 @@ if ( ! isset( $content_width ) ) {
 }
 
 //Add menu support and register main menu
-if ( function_exists( 'register_nav_menus' ) ) {
-  	register_nav_menus(
-  		array(
-  		  'main_menu' => 'Main Menu'
-  		)
-  	);
-}
+// if ( function_exists( 'register_nav_menus' ) ) {
+//   	register_nav_menus(
+//   		array(
+//   		  // 'main_menu' => __('Main Menu'),
+//         'footer' => __('Footer Menu'),
+//   		)
+//   	);
+// }
 
 
 // filter the Gravity Forms button type
@@ -55,7 +56,13 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 		add_action( 'init', 'register_menu' );
 
 		function register_menu(){
-			register_nav_menu( 'top-bar', 'Bootstrap Top Menu' ); 
+			// register_nav_menu( 'top-bar', 'Bootstrap Top Menu' ); 
+        register_nav_menus(
+          array(
+            'top-bar' => __('Bootstrap Top Menu'), 
+            'footer' => __('Footer Menu'),
+          )
+        );
 		}
 
 		class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {

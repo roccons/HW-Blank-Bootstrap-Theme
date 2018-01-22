@@ -1,4 +1,11 @@
 <footer>
+  <nav>
+    <?php wp_nav_menu( array(
+      'theme_location'  => 'footer',
+      // Evita que se agregen automáticamente todas las pags de wp_page_menu cuando no hay menú asignado
+      'fallback_cb' => function(){},
+    ) ); ?>
+  </nav>
   <?php bloginfo( 'name' ); ?>
   <div class="social">
   <?php
