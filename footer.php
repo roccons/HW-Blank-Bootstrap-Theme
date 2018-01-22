@@ -4,7 +4,7 @@
     <nav>
       <?php wp_nav_menu( array(
         'theme_location'  => 'footer',
-        // Evita que se agregen automáticamente todas las pags de wp_page_menu cuando no hay menú asignado
+        // It avoids that all the pages of wp_page_menu are automatically added when there is no assigned menu
         'fallback_cb' => function(){},
       ) ); ?>
     </nav>
