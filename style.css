@@ -1,11 +1,14 @@
 /*
-Theme Name: Blank Bootstrap Gulp Sass Wordpress theme
+Theme Name: HW Blank Bootstrap
+Theme URI: https://github.com/roccons/HW-Blank-Bootstrap-Theme
 Author: roccons
 Author URI: http://habitatweb.mx/
-Description: This is a blank bootstrap theme for wordpress based on the Bootstrap Starter Wordpress theme by 3sparks llc. This version adds Gulp and the possibility to recompile Bootstrap css from Sass.
-Version: 1.0
+Description: This is a blank bootstrap theme for wordpress based on the Bootstrap Starter Wordpress theme by 3sparks llc (https://github.com/roccons/blank-bootstrap-gulp-sass-wp-theme). This version adds Gulp and the possibility to recompile Bootstrap css from Sass (among with some fixes and —hopefully— improvements).
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hwblank
+Tags: blank, starter, bootstrap, gulp, sass
 */
 
 
