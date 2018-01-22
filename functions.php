@@ -161,12 +161,10 @@ function bootstrap_theme_enqueue_scripts() {
 
 	// Bootstrap
 	wp_enqueue_script( 'bootstrap-script', $template_url . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
-
-	//wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
+  // bootstrap styles are compiled into style.css
 
 	//Main Style
-  wp_enqueue_style( 'main-style', $template_url . '/css/index.css' );
-	//wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {

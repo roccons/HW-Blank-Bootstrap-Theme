@@ -15,8 +15,15 @@ gulp.task('php', function() {
 // compila sass
 gulp.task('sass', function () {
   gulp.src('./css/index.s*ss')
-    .pipe(sass({ indentedSyntax: false, outputStyle: 'compressed'  }).on('error', sass.logError))
-    .pipe(gulp.dest('./css'))
+    .pipe(sass({ 
+      indentedSyntax: false, 
+      outputStyle: 'compressed'  }
+    ).on('error', sass.logError))
+    .pipe(rename({
+      basename: "style",
+      extname: ".css"
+    }))
+    .pipe(gulp.dest('./'))
     .pipe(livereload())
     .pipe(notify({ message : "sass"}));
 });
