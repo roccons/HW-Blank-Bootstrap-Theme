@@ -1,0 +1,11 @@
+/** Put here the css you want to be shown inside your tiny mce editor **/
+
+/* these styles are for being able to identify div and spans elements 
+ * (usually used for adding classes) in the visual view
+*/
+div {
+	outline: 1px dotted #999;
+}
+span {
+	background-color: #ffffd8;
+}

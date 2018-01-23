@@ -14,6 +14,23 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 768;
 }
 
+//Use editor styles editor-style.css for tiny mce
+add_editor_style();
+
+//Add custom buttons to the text editor
+add_action( 'admin_print_footer_scripts', 'add_pre_and_div_quicktags' );
+
+function add_pre_and_div_quicktags() {
+	if (wp_script_is('quicktags')){
+		?>
+		<script type="text/javascript">
+			QTags.addButton( 'div_tag', 'div', '<div class="">', '</div>', '', 'Div tag', 1);
+			QTags.addButton( 'span_tag', 'span', '<span class="">', '</span>', '', 'Span tag', 1);
+		</script>
+		<?php
+	}
+}
+
 // Register sidebar
 add_action('widgets_init', 'theme_register_sidebar');
 function theme_register_sidebar() {
