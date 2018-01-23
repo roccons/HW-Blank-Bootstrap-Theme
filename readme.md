@@ -4,6 +4,7 @@ I created this theme from the Bootstrap 3 Starter Wordpress [theme by 3sparks](h
 
 ### Main features
 * Bootstrap 2 level reponsive menu ready to be used
+* Bootstrap navigation
 * Bootstrap styles are compiled from sass, along with your own styles, into the standard style.css file, using gulp
 * Browser reloads automatically each time you edit a sass or php file
 * 1 registered sidebar and 1 footer menu

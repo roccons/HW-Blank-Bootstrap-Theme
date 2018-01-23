@@ -27,6 +27,10 @@
 	<?php get_sidebar(); ?>
 	</div>
 
+	<div class="col-sm-12">
+		<?php if ( function_exists('wp_bootstrap_pagination') )wp_bootstrap_pagination(); ?>
+	</div>
+
 </div>
 
 
