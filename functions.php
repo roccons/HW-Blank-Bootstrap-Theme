@@ -3,6 +3,8 @@
 //disable admin bar
 show_admin_bar(false);
 
+//Replaces absolute URLs with Relative URLs for image paths in posts
+include_once( get_template_directory() . '/includes/relativeimage.php' );
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );

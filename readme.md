@@ -7,6 +7,7 @@ I created this theme from the Bootstrap 3 Starter Wordpress [theme by 3sparks](h
 * Bootstrap navigation
 * Bootstrap styles are compiled from sass, along with your own styles, into the standard style.css file, using gulp
 * Browser reloads automatically each time you edit a sass or php file
+* Relative URLs for image paths in posts (for portability)
 * 1 registered sidebar and 1 footer menu
 * Theme options for storing social links, plus a helper function to show them
 * Text editor includes buttons for adding divs and spans (for easily add classes inside your posts)
