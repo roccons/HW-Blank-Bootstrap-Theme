@@ -23,6 +23,7 @@ This is a Blank Bootstrap 3 Theme for Wordpress. It uses **Gulp** and brings the
 
 ### To customize Bootstrap
 * To use the bootstrap variables you just need to include the variables you want in your theme's `/css/_variables.scss`. The full variables source file is located in `../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss`
+* Don't forget to check the [Bootstrap 3 docs](http://getbootstrap.com/docs/3.3/)
 * To optimize your final Bootstrap css, comment in `assets/stylesheets/_bootstrap.css` all the components you're not using.
 
 ### Credits

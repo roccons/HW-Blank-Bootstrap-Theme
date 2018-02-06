@@ -34,9 +34,55 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-.logo {
-	width: 30px;
+
+
+/********* Header *********/
+
+header {
+	.navbar-brand {
+		.logo {
+			width: 25px;
+		}
+	}
+	.navbar.navbar-default {
+		// the rectangle that contains all the main menu
+		// @extend .navbar-fixed-top;
+	}
+	ul.navbar-nav {
+		@extend .navbar-right;
+	}
+	.menu-item {
+		//
+		a {
+			// 
+			&:hover {
+				// 
+			}
+		}
+		&.active > a {
+			// styles for the active element
+		}
+	}
+
+	@media screen and (min-width: $screen-md-min) {
+		// specific main menu styles for desktop
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		// specific main menu styles for mobile
+		.navbar-toggle {
+			// hamburger menu
+		}
+		.navbar-collapse {
+			// horizontal row at the begining of unfolded mobile menu
+			border: none;
+		}
+	}
 }
+
+
+
+/********* Footer ***********/
+
 footer {
   @extend .well;
   margin-bottom: 0;
