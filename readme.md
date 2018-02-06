@@ -3,7 +3,7 @@
 This is a Blank Bootstrap 3 Theme for Wordpress. It uses **Gulp** and brings the possibility to recompile Bootstrap css from **Sass**. It also has various other features aimed to have a **fast and clean start** on the theme and website development. It's aim is to be as simple and small as possible. Contributions in the direction of having a cleaner theme would be greately welcome!
 
 ### Main features
-* Bootstrap two-level reponsive menu ready to be used
+* Bootstrap two-level reponsive menu ready to be used (with seelectors for its styling already available in the main scss file)
 * Bootstrap pagination
 * Bootstrap styles are compiled from sass, along with your own styles, into the standard style.css file, using gulp
 * Browser reloads automatically each time you edit a sass or php file
