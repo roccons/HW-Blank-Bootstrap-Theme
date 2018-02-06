@@ -13,32 +13,14 @@ Tags: blank, starter, bootstrap, gulp, sass, responsive
 **Bootstrap css is added from the bootstrap version you put inside the vendor/bootstrap-sass/ directory**
 */
 
-/***********
-standard bootstrap sizes 
-************/
-$xs: 0;
-$sm: 768px;
-$md: 992px;
-$lg: 1200px;
-
-
-/*********** 
-variables
-here you can set the bootstrap variables that you want
-full variables file is located in 
-../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables
-************/
-
-// $font-size-base: 15px;
-// $grid-float-breakpoint: $md;
-
 
 /***********  
 import bootstrap 
 ************/
+@import "_variables.scss"; // theme colors and personalized boostrap values
 @import "_fonts.scss"; //add your @font-face definitions here
 @import "../vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "_wpstyles.scss";
+@import "_wpstyles.scss"; // Wordpress basic styles (classes inserted by the editor)
 
 
 /*********** 
@@ -46,6 +28,15 @@ theme styles
 here you can directley add styles or import additional sass files
 feel free to use @extend to apply bootstrap classes and bootstrap variables
 ************/
+@import "_wpcf7.scss"; // If you yo use contact form 7 this should speed up the styling process
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+.logo {
+	width: 30px;
+}
 footer {
   @extend .well;
   margin-bottom: 0;
@@ -55,8 +46,4 @@ footer {
 	&:hover {
 		text-decoration: none;
 	}
-}
-img {
-	max-width: 100%;
-	height: auto;
 }

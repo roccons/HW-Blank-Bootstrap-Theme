@@ -1,12 +1,14 @@
-# HW Blank Bootstrap Wordpress Theme (Gulp + Sass powered)
+# HW Blank Bootstrap 3 Wordpress Theme (Gulp + Sass powered)
 
 I created this theme from the Bootstrap 3 Starter Wordpress [theme by 3sparks](https://github.com/sebastienb/Bootstrap-3-blank-wordpress-theme) as a starting point for my theme development. It adds **Gulp** and **Sass** support and fixes some issues I found in the source theme. **It's aim is to be as simple and small as possible.** Contributions in the direction of having a cleaner theme would be greately welcome!
 
 ### Main features
-* Bootstrap 2 level reponsive menu ready to be used
-* Bootstrap navigation
+* Bootstrap two-level reponsive menu ready to be used
+* Bootstrap pagination
 * Bootstrap styles are compiled from sass, along with your own styles, into the standard style.css file, using gulp
 * Browser reloads automatically each time you edit a sass or php file
+* Avoids browser cache for style.css and scripts.js when updated
+* Optional stylesheet for fast styling of Contact Form 7
 * Relative URLs for image paths in posts (for portability)
 * 1 registered sidebar and 1 footer menu
 * Theme options for storing social links, plus a helper function to show them
@@ -19,8 +21,5 @@ I created this theme from the Bootstrap 3 Starter Wordpress [theme by 3sparks](h
 * Run `npm install` and then run `gulp` to start watching your files. Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
 
 ### To customize Bootstrap
-* To use the bootstrap variables you can edit the original assets/stylesheets/bootstrap/_variables.scss or use any of them directly in your css/bootstrap.scss file, just before the `@import`. This way you can keep your variables if you update your bootstrap version.
+* To use the bootstrap variables you just need to include the variables you want in your theme's `/css/_variables.scss`. The full variables source file is located in `../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss`
 * To optimize your final Bootstrap css, comment in `assets/stylesheets/_bootstrap.css` all the components you're not using.
-
-### Known issues
-* Menu doesn't work correctly with 3 or more levels of depth

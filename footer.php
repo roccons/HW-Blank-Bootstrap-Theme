@@ -1,4 +1,3 @@
-</div> <!-- close main container -->
 <footer>
   <div class="container">
     <nav>

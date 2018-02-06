@@ -1,0 +1,51 @@
+.wpcf7 {
+
+    input[type="text"], input[type="email"], 
+    textarea {
+        padding: 4px;
+    }
+
+    input[type="text"],input[type="email"], textarea {
+        //
+        &:focus {
+            //
+        }
+    }
+
+    input[type="submit"] {
+        @extend .btn;
+        @extend .btn-primary;
+        width: 180px;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        &:hover {
+            //
+        }
+    }
+    
+    label {
+        display: block;
+        font-weight: normal;
+    }
+
+    .wpcf7-not-valid-tip {
+        color: $brand-danger;
+        font-size: 95%;
+    }
+
+    .wpcf7-response-output {
+        margin-top: 0;
+    }
+
+    div.wpcf7-validation-errors {
+        // mensaje de validación
+        border-color: $brand-danger;
+    }
+
+    div.wpcf7-mail-sent-ok {
+        // mensaje de éxito
+        border-color: $brand-success;
+    }
+
+}
