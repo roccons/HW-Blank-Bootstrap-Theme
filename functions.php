@@ -9,6 +9,15 @@ define('IMG_PATH', get_template_directory_uri() . '/img');
 //Replaces absolute URLs with Relative URLs for image paths in posts
 include_once( get_template_directory() . '/includes/relativeimage.php' );
 
+// Bootstrap menus setup
+include_once( get_template_directory() . '/includes/bootstrap-menus.php' );
+
+// WordPress Bootstrap Pagination
+include_once( get_template_directory() . '/includes/bootstrap-pagination.php' );
+
+// Theme options
+include_once( get_template_directory() . '/includes/theme-options.php' );
+
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
 //add_theme_support( 'automatic-feed-links' );
@@ -50,14 +59,6 @@ function theme_register_sidebar() {
 	}
 }
 
-// Bootstrap menus setup
-include_once( get_template_directory() . '/includes/bootstrap-menus.php' );
-
-// WordPress Bootstrap Pagination
-include_once( get_template_directory() . '/includes/bootstrap-pagination.php' );
-
-// Theme options
-include_once( get_template_directory() . '/includes/theme-options.php' );
 
 /**
  * Load site scripts and styles.
