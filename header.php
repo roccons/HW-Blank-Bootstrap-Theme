@@ -38,5 +38,5 @@
             ); ?>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
+      </nav>
     </header>
-    </nav>
