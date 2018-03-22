@@ -18,7 +18,7 @@ This is a Blank Bootstrap 3 Theme for Wordpress. It uses **Gulp** and brings the
 
 ### Setup
 * After installing WordPress, clone this repository within the themes directory.
-* [Download the Bootrstap Sass version](http://getbootstrap.com/getting-started/#download) and put it in your theme src/ directory and rename the directory as "bootstrap-sass" (removing the version part). Alternatively, you can clone it from the [Bootstrap Sass Repository](https://github.com/twbs/bootstrap-sass).
+* [Download the Bootrstap Sass version](http://getbootstrap.com/getting-started/#download) and put it in your theme `/vendor` directory and rename the directory as "bootstrap-sass" (removing the version part). Alternatively, you can clone it from the [Bootstrap Sass Repository](https://github.com/twbs/bootstrap-sass).
 * Run `npm install` and then run `gulp` to start watching your files. Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
 
 ### To customize Bootstrap
