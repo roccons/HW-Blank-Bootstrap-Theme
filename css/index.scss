@@ -19,7 +19,7 @@ import bootstrap
 ************/
 @import "_variables.scss"; // theme colors and personalized boostrap values
 @import "_fonts.scss"; //add your @font-face definitions here
-@import "../vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../vendor/bootstrap/scss/bootstrap.scss";
 @import "_wpstyles.scss"; // Wordpress basic styles (classes inserted by the editor)
 
 
@@ -44,16 +44,17 @@ header {
 			width: 25px;
 		}
 	}
-	.navbar.navbar-default {
+	.navbar {
 		// the rectangle that contains all the main menu
 		// @extend .navbar-fixed-top;
+		margin-bottom: 25px;
 	}
-	ul.navbar-nav {
-		@extend .navbar-right;
+	ul.nav {
+		// @extend .navbar-right;
 	}
-	.menu-item {
+	.nav-item {
 		//
-		a {
+		a.nav-link {
 			// 
 			&:hover {
 				// 
@@ -64,12 +65,13 @@ header {
 		}
 	}
 
-	@media screen and (min-width: $screen-md-min) {
+	@include media-breakpoint-up(md) {
 		// specific main menu styles for desktop
-	}
-	@media screen and (max-width: $screen-sm-max) {
+	}  
+
+	@include media-breakpoint-up(sm) {
 		// specific main menu styles for mobile
-		.navbar-toggle {
+		.navbar-toggler {
 			// hamburger menu
 		}
 		.navbar-collapse {
@@ -84,7 +86,7 @@ header {
 /********* Footer ***********/
 
 footer {
-  @extend .well;
+  // @extend .well;
   margin-bottom: 0;
 }
 .social {

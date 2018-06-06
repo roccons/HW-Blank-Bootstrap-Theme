@@ -28,6 +28,11 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 768;
 }
 
+register_nav_menus([
+	'top-bar' => __( 'top-bar', 'HW Blank Bootstrap' ),
+	'footer' => __('footer', 'HW Blank Bootstrap')
+]);
+
 //Use editor styles editor-style.css for tiny mce
 add_editor_style();
 

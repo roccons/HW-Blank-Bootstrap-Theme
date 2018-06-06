@@ -1,70 +1,49 @@
-<?php
+<?php 
 /**
- * WordPress Bootstrap Pagination
+ *  http://fellowtuts.com/twitter-bootstrap/wordpress-pagination-bootstrap-4-style/
  */
-
-function wp_bootstrap_pagination($args = array())
-{
-    $defaults = array(
-        'range'           => 4,
-        'custom_query'    => false,
-        'previous_string' => __('Previous', 'text-domain'),
-        'next_string'     => __('Next', 'text-domain'),
-        'before_output'   => '<nav class="text-center"><ul class="pagination pagination-lg"><li class="pagina"><span aria-hidden="true">Página: </span></li>',
-        'after_output'    => '</ul></nav>'
-    );
-
-    $args = wp_parse_args(
-        $args,
-        apply_filters('wp_bootstrap_pagination_defaults', $defaults)
-    );
-
-    $args['range'] = (int) $args['range'] - 1;
-    if (!$args['custom_query']) {
-        $args['custom_query'] = @$GLOBALS['wp_query'];
-    }
-
-    $count = (int) $args['custom_query']->max_num_pages;
-    $page  = intval(get_query_var('paged'));
-    $ceil  = ceil($args['range'] / 2);
-
-    if ($count <= 1) {
-        return false;
-    }
-
-    if (!$page) {
-        $page = 1;
-    }
-
-    if ($count > $args['range']) {
-        if ($page <= $args['range']) {
-            $min = 1;
-            $max = $args['range'] + 1;
-        } elseif ($page >= ($count - $ceil)) {
-            $min = $count - $args['range'];
-            $max = $count;
-        } elseif ($page >= $args['range'] && $page < ($count - $ceil)) {
-            $min = $page - $ceil;
-            $max = $page + $ceil;
-        }
-    } else {
-        $min = 1;
-        $max = $count;
-    }
-
-    $echo = '';
-
-    if (!empty($min) && !empty($max)) {
-        for ($i = $min; $i <= $max; $i++) {
-            if ($page == $i) {
-                $echo .= '<li class="active"><span class="active">' . str_pad((int)$i, 1, '0', STR_PAD_LEFT) . '</span></li>';
-            } else {
-                $echo .= sprintf('<li><a href="%s">%001d</a></li>', esc_attr(get_pagenum_link($i)), $i);
-            }
-        }
-    }
-
-    if (isset($echo)) {
-        echo $args['before_output'] . $echo . $args['after_output'];
-    }
+function fellowtuts_wpbs_pagination($pages = '', $range = 2) 
+{  
+	$showitems = ($range * 2) + 1;  
+	global $paged;
+	if(empty($paged)) $paged = 1;
+	if($pages == '')
+	{
+		global $wp_query; 
+		$pages = $wp_query->max_num_pages;
+	
+		if(!$pages)
+			$pages = 1;		 
+	}   
+	
+	if(1 != $pages)
+	{
+	    echo '<nav aria-label="Page navigation" role="navigation">';
+        echo '<span class="sr-only">Page navigation</span>';
+        echo '<ul class="pagination justify-content-center ft-wpbs">';
+		
+        echo '<li class="page-item disabled hidden-md-down d-none d-lg-block"><span class="page-link">Page '.$paged.' of '.$pages.'</span></li>';
+	
+	 	if($paged > 2 && $paged > $range+1 && $showitems < $pages) 
+			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link(1).'" aria-label="First Page">&laquo;<span class="hidden-sm-down d-none d-md-block"> First</span></a></li>';
+	
+	 	if($paged > 1 && $showitems < $pages) 
+			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged - 1).'" aria-label="Previous Page">&lsaquo;<span class="hidden-sm-down d-none d-md-block"> Previous</span></a></li>';
+	
+		for ($i=1; $i <= $pages; $i++)
+		{
+		    if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+				echo ($paged == $i)? '<li class="page-item active"><span class="page-link"><span class="sr-only">Current Page </span>'.$i.'</span></li>' : '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($i).'"><span class="sr-only">Page </span>'.$i.'</a></li>';
+		}
+		
+		if ($paged < $pages && $showitems < $pages) 
+			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged + 1).'" aria-label="Next Page"><span class="hidden-sm-down d-none d-md-block">Next </span>&rsaquo;</a></li>';  
+	
+	 	if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) 
+			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($pages).'" aria-label="Last Page"><span class="hidden-sm-down d-none d-md-block">Last </span>&raquo;</a></li>';
+	
+	 	echo '</ul>';
+        echo '</nav>';
+        //echo '<div class="pagination-info mb-5 text-center">[ <span class="text-muted">Page</span> '.$paged.' <span class="text-muted">of</span> '.$pages.' ]</div>';	 	
+	}
 }

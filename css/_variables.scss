@@ -32,7 +32,7 @@ $color-exmple1: #CDCDBB;
 Fonts
 **************/
 $font-family-base:        'Source Sans Pro' !default;
-$font-size-base:          17px !default;
+$font-size-base:          1rem; //17px !default;
 
 
 $font-size-h1:            floor(($font-size-base * 2.3)) !default;
@@ -60,3 +60,10 @@ $brand-danger:          #d9534f !default;
 
 $body-bg:               #fff !default;
 $text-color:            $gray-dark !default;
+
+$bootstrap-sass-asset-helper: false !default;
+$icon-font-path: '../fonts';
+//** File name for all font files.
+$icon-font-name:          "glyphicons-halflings-regular" !default;
+//** Element ID within SVG icon file.
+$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
