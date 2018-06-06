@@ -33,8 +33,8 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
    */
   class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
-	public const BS_MAX_DEPTH = 2;
-    public const BS_DROPDOWN_MANUAL_DEPTH = 1;
+    const BS_MAX_DEPTH = 2;
+    const BS_DROPDOWN_MANUAL_DEPTH = 1;
     /**
      * @since       1.0.0
      * @access      public
