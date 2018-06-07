@@ -17,14 +17,15 @@ This is a Blank Bootstrap 4 Theme for Wordpress. It uses **Gulp** and brings the
 * Visual editor shows divs and spans as outlines and a soft background color, respectively.
 
 ### Setup
-* After installing WordPress, clone this repository within the themes directory.
-* [Download Bootrstap Source Files](https://getbootstrap.com/docs/4.1/getting-started/download/) and put it in your theme `vendor/` directory and rename the directory as "bootstrap-sass" (removing the version part). Alternatively, you can clone it from the [Bootstrap Sass Repository](https://github.com/twbs/bootstrap/tree/master).
+* After installing WordPress, clone this repository within the themes directory and rename it as you wish.
+* Optional: To use this theme as a starting point for your own Wordpress project repository you may want to delete the hidden `git` directory inside the theme directory, and create a new git repo using `git init`.
 * Run `npm install` and then run `gulp` to start watching your files. Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
 
 ### To customize Bootstrap
+* Optionally, you can replace all the files inside the `vendor/bootstrap` directory with a fresh copy from [Getbootrstap](https://getbootstrap.com/), to ensure you have the latest version of Bootstrap 4.x
 * To use the bootstrap variables you just need to include the variables you want in your theme's `/css/_variables.scss`. The full variables source file is located in `../vendor/bootstrap/assets/scss/_variables.scss`.
 * Don't forget to check the [Bootstrap 4 docs](https://getbootstrap.com/docs/4.1/getting-started/introduction/).
-* To optimize your final Bootstrap css, comment in `scss/bootstrap.css` all the components you're not using.
+* To optimize your final Bootstrap css, comment in `scss/bootstrap.css` all the components you're not using you could delete this readme.md
 
 ### Credits
 * The starting point for this theme was [this 3sparks's theme](https://github.com/sebastienb/Bootstrap-3-blank-wordpress-theme). 
