@@ -19,7 +19,8 @@ This is a Blank Bootstrap 4 Theme for Wordpress. It uses **Gulp** and brings the
 ### Setup
 * After installing WordPress, clone this repository within the themes directory and rename it as you wish. (It is suggested that you also update your theme's name at the beggining of `/css/index.scss`)
 * Optional: To use this theme as a starting point for your own Wordpress project repository you may want to delete the hidden `git` directory inside the theme directory, and create a new git repo using `git init`.
-* Run `npm install` (You might need to use nvm or n to specify the node version to use, since it hasn't worked succesfully with newer node versions than v8.9.x) and then run `gulp` to start watching your files. 
+* Run `npm install` (You might need to use nvm or n to specify the node version to use, since `npm install` hasn't worked succesfully with newer node versions than v8.9.x)
+* Run `gulp` to start watching your files. 
 * Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
 
 ### To customize Bootstrap
