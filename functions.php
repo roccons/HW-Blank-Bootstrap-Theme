@@ -4,7 +4,7 @@
 show_admin_bar(false);
 
 //path hacia las imágenes del template
-define('IMG_PATH', get_template_directory_uri() . 'assets/img');
+define('IMG_PATH', get_template_directory_uri() . 'public/img');
 
 //Replaces absolute URLs with Relative URLs for image paths in posts
 include_once( get_template_directory() . '/includes/relativeimage.php' );

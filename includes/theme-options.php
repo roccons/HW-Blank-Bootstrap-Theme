@@ -104,7 +104,7 @@ function social_links($args)
   if($social_links[$args.'_link']) {
     echo('
       <a href="'.$social_links[$args.'_link'].'" target="_blank">
-      <img src="' . get_bloginfo('template_url') . 'assets/img/icons/'.$args.'.svg" >
+      <img src="' . IMG_PATH . '/icons/' . $args. '.svg" >
       </a>');
   }
 }

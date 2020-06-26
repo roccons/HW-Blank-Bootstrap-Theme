@@ -14,7 +14,10 @@ let mix = require('laravel-mix');
 mix
   .sass('assets/scss/index.scss', '../style.css')
   .js('assets/js/bootstrap.js', 'js')
-  .setPublicPath('dist')
+  .setPublicPath('public')
+  .options({
+    processCssUrls: false
+  })
 
 // Full API
 // mix.js(src, output);

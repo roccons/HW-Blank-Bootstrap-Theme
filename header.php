@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ) ?>/assets//img/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="<?php bloginfo( 'template_directory' ) ?>/assets/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="<?php echo IMG_PATH ?>/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="<?php echo IMG_PATH ?>/favicon-16x16.png" sizes="16x16" />
     <?php wp_head(); ?>
 	</head>
 
