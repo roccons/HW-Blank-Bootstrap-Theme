@@ -1,3 +1,4 @@
+require('dotenv').config()
 let mix = require('laravel-mix');
 
 /*
@@ -15,6 +16,15 @@ mix
   .sass('assets/scss/index.scss', '../style.css')
   .js('assets/js/bootstrap.js', 'js')
   .setPublicPath('public')
+  .browserSync({
+    proxy: process.env.LOCAL_DOMAIN,
+    files: [
+      '*.php',
+      'style.css',
+      'public/js/*.js'
+    ],
+    open: false
+  })
   .options({
     processCssUrls: false
   })
