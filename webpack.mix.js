@@ -12,7 +12,8 @@ let mix = require('laravel-mix');
  */
 
 mix
-  .sass('assets/scss/index.scss', 'dist/');
+  .sass('assets/scss/index.scss', '../style.css')
+  .setPublicPath('dist')
 
 // Full API
 // mix.js(src, output);
