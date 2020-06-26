@@ -20573,8 +20573,8 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Dev\sage\wp-content\themes\HW-Blank-Bootstrap-Theme\assets\js\bootstrap.js */"./assets/js/bootstrap.js");
-module.exports = __webpack_require__(/*! C:\Dev\sage\wp-content\themes\HW-Blank-Bootstrap-Theme\assets\scss\index.scss */"./assets/scss/index.scss");
+__webpack_require__(/*! C:\Dev\wp-dev\wp-content\themes\HW-Blank-Bootstrap-Theme\assets\js\bootstrap.js */"./assets/js/bootstrap.js");
+module.exports = __webpack_require__(/*! C:\Dev\wp-dev\wp-content\themes\HW-Blank-Bootstrap-Theme\assets\scss\index.scss */"./assets/scss/index.scss");
 
 
 /***/ })

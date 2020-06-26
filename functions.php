@@ -4,7 +4,7 @@
 show_admin_bar(false);
 
 //path hacia las imágenes del template
-define('IMG_PATH', get_template_directory_uri() . 'public/img');
+define('IMG_PATH', get_template_directory_uri() . '/public/img');
 
 //Replaces absolute URLs with Relative URLs for image paths in posts
 include_once( get_template_directory() . '/includes/relativeimage.php' );
@@ -71,17 +71,19 @@ function theme_register_sidebar() {
 function bootstrap_theme_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
-	// jQuery.
-	wp_enqueue_script( 'jquery' );
-
-	// Bootstrap (note that bootstrap styles are compiled into style.css)
-	wp_enqueue_script( 'bootstrap-script', $template_url . '/js/bootstrap.min.js', array( 'jquery' ), null, true );
-
-	// Theme Scripts (with forced reload of styles if the file has been updated)
-	wp_enqueue_script( 'theme-scripts', $template_url . '/js/scripts.js', array(), filemtime( get_template_directory() . '/js/scripts.js' ) );
+  // Jquery, Popper.js and Bootstrap dependencies
+	wp_enqueue_script(
+    'bootstrap', $template_url . '/public/js/bootstrap.js',
+    array(),
+    false
+  );
 
 	// Main Style (force reload of styles if it css has been updated)
-	wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
+	wp_enqueue_style(
+    'theme-styles', $template_url . '/style.css',
+    array(),
+    false
+  );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
