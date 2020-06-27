@@ -14,18 +14,16 @@ add_action( 'wp_enqueue_scripts', function () {
    * Add Bootstrap, Jquery and Popper js (Comun scripts)
    */
 	wp_enqueue_script(
-    'bootstrap', $template_url . '/public/js/bootstrap.js',
-    array(),
-    false
+    'bootstrap',
+    mix( 'public/js/bootstrap.js', 'public' )
   );
 
 	/**
    * Main Style (force reload of styles if it css has been updated)
    */
 	wp_enqueue_style(
-    'theme-styles', $template_url . '/style.css',
-    array(),
-    false
+    'theme-styles',
+    mix( 'style.css', 'public' )
   );
 
   /**

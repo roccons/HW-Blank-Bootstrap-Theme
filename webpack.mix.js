@@ -29,6 +29,10 @@ mix
     processCssUrls: false
   })
 
+if (mix.inProduction()) {
+  mix.version()
+}
+
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
