@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+
+use App\View\Components\BootstrapPagination;
+
+get_header(); ?>
 
 <div class="container">
 	<div class="row">
@@ -29,11 +33,7 @@
 		</div>
 
 		<div class="col-sm-12">
-		<?php if (function_exists("fellowtuts_wpbs_pagination")) {
-    		fellowtuts_wpbs_pagination();
-    		//fellowtuts_wpbs_pagination($the_query->max_num_pages);
-		} ?> 
-			<?php /*if ( function_exists('wp_bootstrap_pagination') )wp_bootstrap_pagination();*/ ?>
+		<?php  new BootstrapPagination() ?>
 		</div>
 
 	</div>
