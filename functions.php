@@ -1,10 +1,13 @@
 <?php
 
+include_once( __DIR__ . '/vendor/autoload.php' );
+
+use App\ThemeOptions;
+
+new ThemeOptions;
+
 //disable admin bar
 show_admin_bar(false);
-
-//path hacia las imágenes del template
-define('IMG_PATH', get_template_directory_uri() . '/public/img');
 
 //Replaces absolute URLs with Relative URLs for image paths in posts
 include_once( get_template_directory() . '/includes/relativeimage.php' );
@@ -14,9 +17,6 @@ include_once( get_template_directory() . '/includes/bootstrap-menus.php' );
 
 // WordPress Bootstrap Pagination
 include_once( get_template_directory() . '/includes/bootstrap-pagination.php' );
-
-// Theme options
-include_once( get_template_directory() . '/includes/theme-options.php' );
 
 //Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
@@ -64,7 +64,6 @@ function theme_register_sidebar() {
 	}
 }
 
-
 /**
  * Load site scripts and styles.
  */
@@ -92,5 +91,3 @@ function bootstrap_theme_enqueue_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'bootstrap_theme_enqueue_scripts', 1 );
-
-function pu_display_section($section){}

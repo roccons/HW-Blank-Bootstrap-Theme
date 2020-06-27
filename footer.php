@@ -16,10 +16,10 @@
         <?php
         // social links, using the svgs inside the icons folder
         // sample icons are from https://dribbble.com/shots/2089345-Nucleo-Free-Social-Icons
-        social_links('facebook');
-        social_links('twitter');
-        social_links('youtube');
-        social_links('instagram');
+          social_link( 'youtube' );
+          social_link( 'facebook' );
+          social_link( 'twitter' );
+          social_link( 'instagram' );
         ?>
 
         </div>
