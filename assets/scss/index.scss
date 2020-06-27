@@ -1,42 +1,39 @@
-/*!
-Theme Name: HW Blank Bootstrap
-Theme URI: https://github.com/roccons/HW-Blank-Bootstrap-Theme
-Author: roccons
-Author URI: http://habitatweb.mx/
-Description: This is a Blank Bootstrap 3 Theme for Wordpress. It uses Gulp and brings the possibility to recompile Bootstrap css from Sass. It also has various other features aimed to have a fast and clean start on the theme and website development.
-Version: 2.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: hwblank
-Tags: blank, starter, bootstrap, gulp, sass, responsive
-**This file is generated from css/_index.css using gulp. Don't edit it directly.**
-**Bootstrap css is added from the bootstrap version you put inside the vendor/bootstrap-sass/ directory**
+/*
+  Theme Name: HW Blank Bootstrap
+  Theme URI: https://github.com/roccons/HW-Blank-Bootstrap-Theme
+  Author: roccons
+  Author URI: http://habitatweb.mx/
+  Description: This is a Blank Bootstrap 3 Theme for Wordpress. It uses Gulp and brings the possibility to recompile Bootstrap css from Sass. It also has various other features aimed to have a fast and clean start on the theme and website development.
+  Version: 2.1
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Text Domain: hwblank
+  Tags: blank, starter, bootstrap, gulp, sass, responsive
+  **This file is generated from assets/scss/_index.css using Laravel Mix. Don't edit it directly.**
 */
 
 
-/***********
-import bootstrap
-************/
+/* Imports */
 @import "./_variables.scss"; // theme colors and personalized boostrap values
 @import "./_fonts.scss"; //add your @font-face definitions here
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./_wpstyles.scss"; // Wordpress basic styles (classes inserted by the editor)
+@import "./_wpcf7.scss"; // If you yo use contact form 7 this should speed up the styling process
 
+/*
+  Theme styles
 
-/***********
-theme styles
-here you can directley add styles or import additional sass files
-feel free to use @extend to apply bootstrap classes and bootstrap variables
-************/
-// @import "./_wpcf7.scss"; // If you yo use contact form 7 this should speed up the styling process
+  here you can directley add styles or import additional sass files
+  feel free to use @extend to apply bootstrap classes and bootstrap variables
+*/
+
 
 img {
 	max-width: 100%;
 	height: auto;
 }
 
-
-/********* Header *********/
+/* Header */
 
 header {
 	.navbar-brand {
@@ -49,31 +46,8 @@ header {
 		// @extend .navbar-fixed-top;
 		margin-bottom: 25px;
 	}
-	ul.nav {
-		// @extend .navbar-right;
-	}
-	.nav-item {
-		//
-		a.nav-link {
-			//
-			&:hover {
-				//
-			}
-		}
-		&.active > a {
-			// styles for the active element
-		}
-	}
-
-	@include media-breakpoint-up(md) {
-		// specific main menu styles for desktop
-	}
 
 	@include media-breakpoint-up(sm) {
-		// specific main menu styles for mobile
-		.navbar-toggler {
-			// hamburger menu
-		}
 		.navbar-collapse {
 			// horizontal row at the begining of unfolded mobile menu
 			border: none;
@@ -81,12 +55,9 @@ header {
 	}
 }
 
-
-
-/********* Footer ***********/
+/* Footer */
 
 footer {
-  // @extend .well;
   margin-bottom: 0;
 }
 .social {

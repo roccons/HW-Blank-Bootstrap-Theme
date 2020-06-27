@@ -1,18 +1,18 @@
-/***********
-Variables
-Here you can set the bootstrap variables that you want
-Full variables file is located in
-../vendor/bootstrap-sass/assets/stylesheets/bootstrap/_variables
-You can safely erase all of its contents if you wish
-************/
+/*
+  Variables
 
+  Here you can set the bootstrap variables that you want
+  Full variables file is located in
+  /node_modules/bootstrap/scss
+  You can safely erase all of its contents if you wish
+*/
 
-/***********
-Standard bootstrap sizes
-this variables are not part of bootstrap,
-but they are handy
-(container default: 970px)
-************/
+/*
+  Standard bootstrap sizes
+
+  this variables are not part of bootstrap, but they are handy
+  (container default: 970px)
+*/
 $xs: 0;
 $sm: 768px;
 $md: 992px;
@@ -20,17 +20,16 @@ $lg: 1200px;
 
 $grid-float-breakpoint: $md;
 
-/*************
-Custom colors:
-you may want to add custom theme colors here,
-so you can assign them to bootstrap brand colors
-**************/
+/*
+  Custom colors:
+
+  you may want to add custom theme colors here, so you can assign them to
+  bootstrap brand colors
+*/
 $color-exmple1: #CDCDBB;
 
 
-/*************
-Fonts
-**************/
+/* Fonts */
 $font-family-base:        'Source Sans Pro' !default;
 $font-size-base:          1rem; //17px !default;
 
@@ -42,9 +41,7 @@ $font-size-h4:            ceil(($font-size-base * 1.25)) !default;
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default;
 
-/**************
-Colors
-***************/
+/* Colors */
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
@@ -62,8 +59,8 @@ $body-bg:               #fff !default;
 $text-color:            $gray-dark !default;
 
 $bootstrap-sass-asset-helper: false !default;
+
+/* Icon */
 $icon-font-path: 'public/fonts/';
-//** File name for all font files.
-$icon-font-name:          "glyphicons-halflings-regular" !default;
-//** Element ID within SVG icon file.
-$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+$icon-font-name: 'glyphicons-halflings-regular';
+$icon-font-svg-id: 'glyphicons_halflingsregular';

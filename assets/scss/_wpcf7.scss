@@ -1,15 +1,7 @@
 .wpcf7 {
-
-    input[type="text"], input[type="email"], 
+    input[type="text"], input[type="email"],
     textarea {
         padding: 4px;
-    }
-
-    input[type="text"],input[type="email"], textarea {
-        //
-        &:focus {
-            //
-        }
     }
 
     input[type="submit"] {
@@ -19,11 +11,8 @@
         display: block;
         margin: auto;
         margin-top: 10px;
-        &:hover {
-            //
-        }
     }
-    
+
     label {
         display: block;
         font-weight: normal;

@@ -1,12 +1,12 @@
-//
-// Glyphicons for Bootstrap
-//
-// Since icons are fonts, they can be placed anywhere text is placed and are
-// thus automatically sized to match the surrounding child. To use, create an
-// inline element with the appropriate classes, like so:
-//
-// <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+/*
+  Glyphicons for Bootstrap
 
+  Since icons are fonts, they can be placed anywhere text is placed and are
+  thus automatically sized to match the surrounding child. To use, create an
+  inline element with the appropriate classes, like so:
+
+  <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+*/
 @at-root {
     // Import the fonts
     @font-face {
@@ -19,7 +19,7 @@
            url(if($bootstrap-sass-asset-helper, twbs-font-path('#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}'), '#{$icon-font-path}#{$icon-font-name}.svg##{$icon-font-svg-id}')) format('svg');
     }
   }
-  
+
   // Catchall baseclass
   .glyphicon {
     position: relative;
@@ -32,7 +32,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   // Individual icons
   .glyphicon-asterisk               { &:before { content: "\002a"; } }
   .glyphicon-plus                   { &:before { content: "\002b"; } }
@@ -305,4 +305,3 @@
   .glyphicon-menu-right             { &:before { content: "\e258"; } }
   .glyphicon-menu-down              { &:before { content: "\e259"; } }
   .glyphicon-menu-up                { &:before { content: "\e260"; } }
-  
