@@ -1,90 +1,31 @@
 <?php
 
-include_once( __DIR__ . '/vendor/autoload.php' );
-
-use App\View\Admin\ThemeOptions;
-
-new ThemeOptions;
-
-//disable admin bar
-show_admin_bar(false);
-
-//Replaces absolute URLs with Relative URLs for image paths in posts
-include_once( get_template_directory() . '/includes/relativeimage.php' );
-
-// WordPress Bootstrap Pagination
-include_once( get_template_directory() . '/includes/bootstrap-pagination.php' );
-
-//Add thumbnail, automatic feed links and title tag support
-add_theme_support( 'post-thumbnails' );
-//add_theme_support( 'automatic-feed-links' );
-add_theme_support( 'title-tag' );
-
-//Add content width (desktop default)
-if ( ! isset( $content_width ) ) {
-	$content_width = 768;
+/**
+ * Register The Auto Loader
+ */
+if( ! file_exists( $composer = __DIR__ . '/vendor/autoload.php' ) ) {
+  wp_die( __('Error locating autoloader. Please run <code>composer install</code>.', 'HW Blank Theme') );
 }
 
-register_nav_menus([
-	'top-bar' => __( 'top-bar', 'HW Blank Bootstrap' ),
-	'footer' => __('footer', 'HW Blank Bootstrap')
-]);
-
-//Use editor styles editor-style.css for tiny mce
-add_editor_style();
-
-//Add custom buttons to the text editor
-add_action( 'admin_print_footer_scripts', 'add_pre_and_div_quicktags' );
-
-function add_pre_and_div_quicktags() {
-	if (wp_script_is('quicktags')){
-		?>
-		<script type="text/javascript">
-			QTags.addButton( 'div_tag', 'div', '<div class="">', '</div>', '', 'Div tag', 1);
-			QTags.addButton( 'span_tag', 'span', '<span class="">', '</span>', '', 'Span tag', 1);
-		</script>
-		<?php
-	}
-}
-
-// Register sidebar
-add_action('widgets_init', 'theme_register_sidebar');
-function theme_register_sidebar() {
-	if ( function_exists('register_sidebar') ) {
-		register_sidebar(array(
-		    'id' => 'sidebar-1',
-		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		    'after_widget' => '</div>',
-		    'before_title' => '<h4>',
-		    'after_title' => '</h4>',
-		 ));
-	}
-}
+require $composer;
 
 /**
- * Load site scripts and styles.
+ * Register Theme Files
  */
-function bootstrap_theme_enqueue_scripts() {
-	$template_url = get_template_directory_uri();
+$files = [
+  'config',
+  'helpers',
+  'setup',
+  'filters',
+  'admin'
+];
 
-  // Jquery, Popper.js and Bootstrap dependencies
-	wp_enqueue_script(
-    'bootstrap', $template_url . '/public/js/bootstrap.js',
-    array(),
-    false
-  );
+foreach( $files as $file ) {
+  $file = "app/{$file}.php";
 
-	// Main Style (force reload of styles if it css has been updated)
-	wp_enqueue_style(
-    'theme-styles', $template_url . '/style.css',
-    array(),
-    false
-  );
-
-	// Load Thread comments WordPress script.
-	if ( is_singular() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+  if ( ! locate_template($file, true, true) ) {
+    wp_die(
+      sprintf( __( 'Error locating <code>%s</code> for inclusion', 'HW Blank Theme' ), $file )
+    );
+  }
 }
-
-add_action( 'wp_enqueue_scripts', 'bootstrap_theme_enqueue_scripts', 1 );

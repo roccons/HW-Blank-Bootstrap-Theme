@@ -13,10 +13,6 @@
   "autoload": {
     "psr-4": {
       "App\\": "app/"
-    },
-    "files": [
-      "utils/config.php",
-      "utils/helpers.php"
-    ]
+    }
   }
 }
