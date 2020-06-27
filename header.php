@@ -35,7 +35,7 @@ use App\View\Components\BootstrapNavWalker;
                 'container'       => false,
                 'container_class' => 'collapse navbar-collapse',
                 'menu_class'      => 'nav navbar-nav ml-auto',
-                'fallback_cb'     => 'BootstrapNavWalker::fallback',
+                'fallback_cb'     => 'App\View\Components\BootstrapNavWalker::fallback',
                 'walker'          => new BootstrapNavWalker()
             ) );
             ?>
