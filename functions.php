@@ -2,7 +2,7 @@
 
 include_once( __DIR__ . '/vendor/autoload.php' );
 
-use App\ThemeOptions;
+use App\View\Admin\ThemeOptions;
 
 new ThemeOptions;
 
@@ -11,9 +11,6 @@ show_admin_bar(false);
 
 //Replaces absolute URLs with Relative URLs for image paths in posts
 include_once( get_template_directory() . '/includes/relativeimage.php' );
-
-// Bootstrap menus setup
-include_once( get_template_directory() . '/includes/bootstrap-menus.php' );
 
 // WordPress Bootstrap Pagination
 include_once( get_template_directory() . '/includes/bootstrap-pagination.php' );

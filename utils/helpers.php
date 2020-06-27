@@ -1,6 +1,6 @@
 <?php
 
-use App\ThemeOptions;
+use App\View\Admin\ThemeOptions;
 
 /**
  * Helper shortcut to display social_link

@@ -1,3 +1,9 @@
+<?php
+
+use App\View\Components\BootstrapNavWalker;
+
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
   <head>
@@ -29,8 +35,8 @@
                 'container'       => false,
                 'container_class' => 'collapse navbar-collapse',
                 'menu_class'      => 'nav navbar-nav ml-auto',
-                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                'walker'          => new WP_Bootstrap_Navwalker()
+                'fallback_cb'     => 'BootstrapNavWalker::fallback',
+                'walker'          => new BootstrapNavWalker()
             ) );
             ?>
           </div>
