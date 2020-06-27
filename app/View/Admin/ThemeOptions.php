@@ -185,7 +185,7 @@ class ThemeOptions {
     if( $socialLinks[$name] ) {
       echo("
         <a href='{$socialLinks[$fieldName]}' target='_blank'>
-          <img src='{$imgPath}>'
+          <img src='{$imgPath}'>
         </a>
       ");
     }

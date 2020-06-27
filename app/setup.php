@@ -8,8 +8,6 @@ namespace App;
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function () {
-  $template_url = get_template_directory_uri();
-
   /**
    * Add Bootstrap, Jquery and Popper js (Comun scripts)
    */
@@ -82,13 +80,13 @@ add_action( 'after_setup_theme', function () {
    */
   add_action('widgets_init', function () {
     if ( function_exists('register_sidebar') ) {
-      register_sidebar(array(
+      register_sidebar( array(
           'id' => 'sidebar-1',
           'before_widget' => '<div id="%1$s" class="widget %2$s">',
           'after_widget' => '</div>',
           'before_title' => '<h4>',
           'after_title' => '</h4>',
-       ));
+       ) );
     }
   });
 }, 20 );

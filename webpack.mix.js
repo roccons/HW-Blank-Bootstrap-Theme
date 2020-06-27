@@ -1,5 +1,15 @@
 require('dotenv').config()
+
 let mix = require('laravel-mix');
+
+const filesObserved = [
+  '*.php',
+  '**/*.php',
+  '**/**/*.php',
+  '**/**/**/*.php',
+  'style.css',
+  'public/js/*.js'
+]
 
 /*
  |--------------------------------------------------------------------------
@@ -18,11 +28,7 @@ mix
   .setPublicPath('public')
   .browserSync({
     proxy: process.env.LOCAL_DOMAIN,
-    files: [
-      '*.php',
-      'style.css',
-      'public/js/*.js'
-    ],
+    files: filesObserved,
     open: false
   })
   .options({
