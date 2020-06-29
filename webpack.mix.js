@@ -2,15 +2,7 @@ require('dotenv').config()
 
 let mix = require('laravel-mix');
 
-const filesObserved = [
-  '*.php',
-  '**/*.php',
-  '**/**/*.php',
-  '**/**/**/*.php',
-  'style.css',
-  'public/js/*.js'
-]
-
+require('laravel-mix-imagemin');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -22,17 +14,34 @@ const filesObserved = [
  |
  */
 
+// Set output path to public/ and desactive processCssUrl for better build
+// performance
+mix
+  .setPublicPath('public')
+  .options({
+    processCssUrls: false
+  })
+
+// Compile Sass and Js
 mix
   .sass('assets/scss/index.scss', '../style.css')
   .js('assets/js/bootstrap.js', 'js')
-  .setPublicPath('public')
+
+// BrowserSync Config
+const filesObserved = [
+  '*.php',
+  '**/*.php',
+  '**/**/*.php',
+  '**/**/**/*.php',
+  'style.css',
+  'public/js/*.js'
+]
+
+mix
   .browserSync({
     proxy: process.env.LOCAL_DOMAIN,
     files: filesObserved,
     open: false
-  })
-  .options({
-    processCssUrls: false
   })
 
 if (mix.inProduction()) {
