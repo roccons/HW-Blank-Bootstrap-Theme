@@ -2,7 +2,8 @@ require('dotenv').config()
 
 let mix = require('laravel-mix');
 
-require('laravel-mix-imagemin');
+require('laravel-mix-purgecss');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -29,10 +30,7 @@ mix
 
 // BrowserSync Config
 const filesObserved = [
-  '*.php',
   '**/*.php',
-  '**/**/*.php',
-  '**/**/**/*.php',
   'style.css',
   'public/js/*.js'
 ]
@@ -44,8 +42,24 @@ mix
     open: false
   })
 
+// PurgeCSS, enabled only in production
+const filesToPurge = [
+  '**/*.php',
+  'assets/js/*.js'
+]
+
+mix
+  .purgeCss({
+    content: filesToPurge,
+    whitelist: require('purgecss-with-wordpress').whitelist,
+    whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns
+  })
+
+// Config for onlyProduction
 if (mix.inProduction()) {
-  mix.version()
+  // Mix version
+  mix
+    .version()
 }
 
 // Full API

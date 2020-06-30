@@ -26,6 +26,8 @@
     "imagemin-jpegoptim": "^7.0.0",
     "imagemin-pngquant": "^9.0.0",
     "laravel-mix": "^5.0.4",
+    "laravel-mix-purgecss": "^5.0.0",
+    "purgecss-with-wordpress": "^2.3.0",
     "resolve-url-loader": "3.1.0",
     "sass": "^1.26.9",
     "sass-loader": "8.*",
