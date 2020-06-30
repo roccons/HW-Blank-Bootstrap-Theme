@@ -1,8 +1,9 @@
 require('dotenv').config()
 
-let mix = require('laravel-mix');
+let mix = require('laravel-mix')
 
-require('laravel-mix-purgecss');
+require('laravel-mix-purgecss')
+require('laravel-mix-eslint')
 
 /*
  |--------------------------------------------------------------------------
@@ -27,6 +28,10 @@ mix
 mix
   .sass('assets/scss/index.scss', '../style.css')
   .js('assets/js/bootstrap.js', 'js')
+  .eslint({
+    cache: false,
+    fix: false
+  })
 
 // BrowserSync Config
 const filesObserved = [
