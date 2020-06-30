@@ -13,13 +13,18 @@
     "watch": "yarn development --watch",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "yarn production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "optimize-images": "imagemin assets/img/* --plugin.jpegoptim.progressive=true --plugin.jpegoptim.max=70 --plugin.pngquant --out-dir=public/img"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "2.0.1",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
+    "imagemin": "^7.0.1",
+    "imagemin-cli": "^6.0.0",
+    "imagemin-jpegoptim": "^7.0.0",
+    "imagemin-pngquant": "^9.0.0",
     "laravel-mix": "^5.0.4",
     "resolve-url-loader": "3.1.0",
     "sass": "^1.26.9",
