@@ -1,66 +1,117 @@
-/*
-  Variables
+// Custom spacers and sizes
+$pad-1: 4px;
+$pad-2: 8px;
+$pad-3: 12px;
+$pad-4: 16px;
+$pad-5: 24px;
+$pad-6: 32px;
+$pad-7: 48px;
+$pad-8: 64px;
+$pad-9: 96px;
+$pad-10: 128px;
+$pad-11: 192px;
+$pad-12: 256px;
+$pad-13: 384px;
+$pad-14: 512px;
+$pad-15: 640px;
+$pad-16: 768px;
 
-  Here you can set the bootstrap variables that you want
-  Full variables file is located in
-  /node_modules/bootstrap/scss
-  You can safely erase all of its contents if you wish
-*/
+$spacers: (
+  1: $pad-1,
+  2: $pad-2,
+  3: $pad-3,
+  4: $pad-4,
+  5: $pad-5,
+  6: $pad-6,
+  7: $pad-7,
+  8: $pad-8,
+  9: $pad-9,
+  10: $pad-10,
+  11: $pad-11,
+  12: $pad-12,
+  13: $pad-13,
+  14: $pad-14,
+  15: $pad-15,
+  16: $pad-16,
+);
 
-/*
-  Standard bootstrap sizes
+$sizes: $spacers;
 
-  this variables are not part of bootstrap, but they are handy
-  (container default: 970px)
-*/
-$xs: 0;
-$sm: 768px;
-$md: 992px;
-$lg: 1200px;
+// Colors
 
-$grid-float-breakpoint: $md;
+$redwine: #520021;
+$redwine-dark: #380016;
+$purple: #9f0040;
+$orange: #f60;
+$green: #85bb34;
+$green-dark: #397312;
 
-/*
-  Custom colors:
+// Social colors
+$facebook: #3B5998;
+$twitter: #33ccff;
+$instagram: #d6249f;
 
-  you may want to add custom theme colors here, so you can assign them to
-  bootstrap brand colors
-*/
-$color-exmple1: #CDCDBB;
+$colors: (
+  'redwine': $redwine,
+  'redwine-dark': $redwine-dark,
+  'purple': $purple,
+  'orange': $orange,
+  'green': $green,
+  'green-dark': $green-dark,
+  'facebook': $facebook,
+  'twitter': $twitter,
+  'instagram': $instagram
+);
 
+$theme-colors: $colors;
 
-/* Fonts */
-$font-family-base:        'Source Sans Pro' !default;
-$font-size-base:          1rem; //17px !default;
+$primary: $redwine;
+$secondary: $purple;
+$success: $green;
 
+$gray-800: #4c4846;
 
-$font-size-h1:            floor(($font-size-base * 2.3)) !default;
-$font-size-h2:            floor(($font-size-base * 2.0)) !default;
-$font-size-h3:            ceil(($font-size-base * 1.5)) !default;
-$font-size-h4:            ceil(($font-size-base * 1.25)) !default;
-$font-size-h5:            $font-size-base !default;
-$font-size-h6:            ceil(($font-size-base * 0.85)) !default;
+// Fonts
 
-/* Colors */
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$rfs-base-font-size: 1.125rem;
 
-$brand-primary:         darken(#428bca, 6.5%) !default;
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$font-size-base: 1.25rem;
+$font-size-lg: $font-size-base * 1.125;
 
-$body-bg:               #fff !default;
-$text-color:            $gray-dark !default;
+$font-primary: 'Yanone Kaffeesatz', sans-serif;
+$font-secondary: 'Zilla Slab', sans-serif;
 
-$bootstrap-sass-asset-helper: false !default;
+$font-family-base: $font-secondary;
+$headings-font-family: $font-primary;
+$headings-font-weight: 400;
 
-/* Icon */
-$icon-font-path: 'public/fonts/';
-$icon-font-name: 'glyphicons-halflings-regular';
-$icon-font-svg-id: 'glyphicons_halflingsregular';
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+$display1-weight: 400;
+$display2-weight: 400;
+$display3-weight: 400;
+$display4-weight: 400;
+
+$enable-responsive-font-sizes: true;
+
+$body-color: $gray-800;
+$body-bg: #f7f8fc;
+
+$link-color: $secondary;
+$link-hover-color: $success;
+$link-hover-decoration: none;
+
+// Misc
+
+$easing: cubic-bezier(0.25, 1, 0.5, 1);
+$transition-basic: all 150ms $easing;
+
+$tooltip-bg: #4C4846;
+$tooltip-max-width: 250px;
+$tooltip-opacity: 1;
+$tooltip-font-size: 1rem;

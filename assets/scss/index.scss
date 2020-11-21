@@ -1,10 +1,9 @@
 /*
-  Theme Name: HW Blank Bootstrap
+  Theme Name: Raisins Theme
   Theme URI: https://github.com/roccons/HW-Blank-Bootstrap-Theme
-  Author: roccons
+  Author: Rosendito <rosendojose0617@gmail.com>
   Author URI: http://habitatweb.mx/
-  Description: This is a Blank Bootstrap 3 Theme for Wordpress. It uses Gulp and brings the possibility to recompile Bootstrap css from Sass. It also has various other features aimed to have a fast and clean start on the theme and website development.
-  Version: 2.1
+  Description: Tema de raisins basado en HW Blank Theme
   License: GNU General Public License v2 or later
   License URI: http://www.gnu.org/licenses/gpl-2.0.html
   Text Domain: hwblank
@@ -12,60 +11,35 @@
   **This file is generated from assets/scss/_index.css using Laravel Mix. Don't edit it directly.**
 */
 
+@import './variables.scss';
 
-/* Imports */
-@import "./_variables.scss"; // theme colors and personalized boostrap values
-@import "./_fonts.scss"; //add your @font-face definitions here
-@import "~bootstrap/scss/bootstrap.scss";
-@import "./_wpstyles.scss"; // Wordpress basic styles (classes inserted by the editor)
-@import "./_wpcf7.scss"; // If you yo use contact form 7 this should speed up the styling process
+@import "~bootstrap/scss/functions.scss";
+@import "~bootstrap/scss/variables.scss";
+@import "~bootstrap/scss/mixins.scss";
+@import "~bootstrap/scss/root.scss";
+@import "~bootstrap/scss/reboot.scss";
+@import "~bootstrap/scss/type.scss";
+@import "~bootstrap/scss/images.scss";
+@import "~bootstrap/scss/code.scss";
+@import "~bootstrap/scss/grid.scss";
+@import "~bootstrap/scss/tables.scss";
+@import "~bootstrap/scss/forms.scss";
+@import "~bootstrap/scss/buttons.scss";
+@import "~bootstrap/scss/transitions.scss";
+@import "~bootstrap/scss/custom-forms.scss";
+@import "~bootstrap/scss/nav.scss";
+@import "~bootstrap/scss/navbar.scss";
+@import "~bootstrap/scss/card.scss";
+@import "~bootstrap/scss/tooltip.scss";
+@import "~bootstrap/scss/tables.scss";
+@import "~bootstrap/scss/modal.scss";
+@import "~bootstrap/scss/utilities.scss";
+@import "~bootstrap/scss/print.scss";
 
-/*
-  Theme styles
-
-  here you can directley add styles or import additional sass files
-  feel free to use @extend to apply bootstrap classes and bootstrap variables
-*/
-
-
-img {
-	max-width: 100%;
-	height: auto;
-}
-
-/* Header */
-
-header {
-	.navbar-brand {
-		.logo {
-			width: 25px;
-		}
-	}
-	.navbar {
-		// the rectangle that contains all the main menu
-		// @extend .navbar-fixed-top;
-		margin-bottom: 25px;
-	}
-
-	@include media-breakpoint-up(sm) {
-		.navbar-collapse {
-			// horizontal row at the begining of unfolded mobile menu
-			border: none;
-		}
-	}
-}
-
-/* Footer */
-
-footer {
-  margin-bottom: 0;
-}
-.social {
-	text-align: right;
-		a {
-		margin-left: 5px;
-		&:hover {
-			text-decoration: none;
-		}
-	}
-}
+@import '~slick-carousel/slick/slick.scss';
+@import './mixins';
+@import './custom';
+@import './header';
+@import './footer';
+@import './wpcf7.scss';
+@import './wpstyles.scss';

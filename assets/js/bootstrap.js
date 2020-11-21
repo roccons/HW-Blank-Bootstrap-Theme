@@ -1,5 +1,5 @@
-import Popper from 'popper.js/dist/popper'
-
 window.$ = window.jQuery = require('jquery')
-window.Popper = Popper
-require('bootstrap')
+require('bootstrap/js/src/tooltip.js')
+require('bootstrap/js/src/collapse.js')
+require('bootstrap/js/src/modal.js')
+require('./general')
