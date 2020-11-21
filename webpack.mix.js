@@ -29,7 +29,6 @@ mix
 mix
   .sass('assets/sass/index.scss', 'css/style.css')
   .js('assets/js/bootstrap.js', 'js')
-  .js('assets/vue/index.js', 'vue/table.js')
   .eslint({
     cache: false,
     fix: false
