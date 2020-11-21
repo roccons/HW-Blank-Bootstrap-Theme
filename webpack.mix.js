@@ -21,50 +21,31 @@ require('laravel-mix-eslint')
 mix
   .setPublicPath('public')
   .options({
-    processCssUrls: false
+    processCssUrls: false,
   })
+  .version()
 
 // Compile Sass and Js
 mix
-  .sass('assets/scss/index.scss', '../style.css')
+  .sass('assets/sass/index.scss', 'css/style.css')
   .js('assets/js/bootstrap.js', 'js')
+  .js('assets/vue/index.js', 'vue/table.js')
   .eslint({
     cache: false,
     fix: false
   })
 
 // BrowserSync Config
-const filesObserved = [
-  '**/*.php',
-  'style.css',
-  'public/js/*.js'
-]
+const filesObserved = ['**/*.php', 'public/css/*.css', 'public/js/*.js']
 
-mix
-  .browserSync({
+// Para activar el browserSync es necesario tener definida la variable de
+// entorno LOCAL_DOMAIN
+if (process.env.LOCAL_DOMAIN) {
+  mix.browserSync({
     proxy: process.env.LOCAL_DOMAIN,
     files: filesObserved,
-    open: false
+    open: false,
   })
-
-// PurgeCSS, enabled only in production
-const filesToPurge = [
-  '**/*.php',
-  'assets/js/*.js'
-]
-
-mix
-  .purgeCss({
-    content: filesToPurge,
-    whitelist: require('purgecss-with-wordpress').whitelist,
-    whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns
-  })
-
-// Config for onlyProduction
-if (mix.inProduction()) {
-  // Mix version
-  mix
-    .version()
 }
 
 // Full API

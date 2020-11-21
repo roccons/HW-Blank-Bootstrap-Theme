@@ -1,7 +1,7 @@
 <?php
 
 namespace App\View\Admin;
-
+use App\View\Admin\GtmScripts;
 class ThemeOptions {
   /**
    * List of social fields
@@ -11,23 +11,28 @@ class ThemeOptions {
   private $socialFields = array(
     array(
       'label'       => 'Facebook',
-      'name'        => 'facebook_link',
+      'name'        => 'facebook',
       'placeholder' => 'Facebook Link - Example: http://facebook.com/username'
     ),
     array(
       'label'       => 'Twitter',
-      'name'        => 'twitter_link',
+      'name'        => 'twitter',
       'placeholder' => 'Twitter Link - Example: http://twitter.com/username'
     ),
     array(
       'label'       => 'Youtube',
-      'name'        => 'youtube_link',
+      'name'        => 'youtube',
       'placeholder' => 'Youtube Link - Example: https://www.youtube.com/channel/channel_id'
     ),
     array(
       'label'       => 'Instagram',
-      'name'        => 'instagram_link',
+      'name'        => 'instagram',
       'placeholder' => 'Instagram Link - Example: http://instagram.com/username'
+    ),
+    array(
+      'label'       => 'Google Tag Manager',
+      'name'        => 'gtm',
+      'placeholder' => 'GTM ID - Example: GTM-XXXXXXX'
     ),
   );
 
@@ -73,9 +78,30 @@ class ThemeOptions {
           do_settings_sections( 'hw_theme_options_page' );
         ?>
           <p class="submit">
-            <input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+            <input type="submit" id="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
           </p>
         </form>
+        <script>
+        var gtm = document.getElementById('gtm')
+        var send = document.getElementById('submit')
+        var checkGTM = function(value){
+          if (!value.trim()) {
+            send.disabled = false
+            return true
+          }
+          if (value.indexOf('GTM-') === 0) {
+            send.disabled = false
+            return true
+          }
+          send.disabled = true
+          return false
+        }
+        gtm.addEventListener("change",function(){
+          checkGTM(gtm.value)
+          !checkGTM(gtm.value) && alert('Google Tag Manager Id Incorrecto')
+        })
+        checkGTM(gtm.value)
+      </script>
       </div>
     <?php
   }
@@ -189,6 +215,42 @@ class ThemeOptions {
         </a>
       ");
     }
+  }
+  /**
+   * Helper to render gtm tags
+   *
+   * @param string $name
+   * @param string $position
+   */
+  public static function gtm_tags ( String $name, String $position)
+  {
+    $options = get_option( 'hw_theme_options' );
+    $id = $options[$name];
+
+    if($position === "head"){
+      if($options[$name]) {
+        return GtmScripts::headGTM($id);
+      }
+    }
+
+    if($position === "body"){
+      if($options[$name]) {
+        return GtmScripts::bodyGTM($id);
+      }
+    }
+
+  }
+
+  /**
+   * Helper to get social_link
+   */
+  public static function getSocialLinks()
+  {
+    $socialLinks = get_option( 'hw_theme_options' );
+
+    unset($socialLinks['gtm']);
+
+    return $socialLinks;
   }
 
   /**

@@ -25,3 +25,23 @@ add_filter( 'image_send_to_editor', function ($html) {
 
 	return $html;
 } , 5, 8 );
+
+/**
+ * Remove height and width attribute from post_thumbnail
+ */
+add_filter( 'post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+  $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+  return $html;
+}, 10, 5 );
+
+/**
+ * Change 404 metatitle
+ */
+add_filter( 'document_title_parts', function ( $title_parts ) {
+  if( is_404() ) {
+    $title_parts['title'] = 'Página no encontrada';
+  }
+
+  return $title_parts;
+}, 11 );
+
