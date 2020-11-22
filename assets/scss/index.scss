@@ -1,9 +1,9 @@
 /*
-  Theme Name: Raisins Theme
+  Theme Name: Blank Theme
   Theme URI: https://github.com/roccons/HW-Blank-Bootstrap-Theme
-  Author: Rosendito <rosendojose0617@gmail.com>
+  Author: roccons
   Author URI: http://habitatweb.mx/
-  Description: Tema de raisins basado en HW Blank Theme
+  Description: Its a minimalistic wordpress theme
   License: GNU General Public License v2 or later
   License URI: http://www.gnu.org/licenses/gpl-2.0.html
   Text Domain: hwblank
@@ -36,7 +36,6 @@
 @import "~bootstrap/scss/utilities.scss";
 @import "~bootstrap/scss/print.scss";
 
-@import '~slick-carousel/slick/slick.scss';
 @import './mixins';
 @import './custom';
 @import './header';

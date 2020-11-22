@@ -1,1 +1,1 @@
-const $ = window.$
+// const $ = window.$

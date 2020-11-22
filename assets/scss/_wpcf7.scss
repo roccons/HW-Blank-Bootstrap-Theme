@@ -19,7 +19,7 @@
     }
 
     .wpcf7-not-valid-tip {
-        color: $brand-danger;
+        color:$gray-800;
         font-size: 95%;
     }
 
@@ -29,12 +29,12 @@
 
     div.wpcf7-validation-errors {
         // mensaje de validación
-        border-color: $brand-danger;
+        border-color: $primary;
     }
 
     div.wpcf7-mail-sent-ok {
         // mensaje de éxito
-        border-color: $brand-success;
+        border-color: $success;
     }
 
 }

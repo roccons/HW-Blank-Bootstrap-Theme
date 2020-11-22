@@ -1,0 +1,57 @@
+.footer
+  a
+    color: white
+
+    &:hover
+      text-decoration: none
+      color: $secondary
+  &-first
+    @media print
+      display: none !important
+  &-social
+    display: flex
+    list-style: none
+    margin: 0
+    padding: 0
+    margin-top: $pad-5
+
+    +media-breakpoint-up('lg')
+      margin-top: 0
+
+    li:not(:last-child)
+      margin-right: $pad-3
+
+    &-link
+      positiion: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      width: $pad-7
+      height: $pad-7
+      background: $secondary
+      border-radius: 2000px
+
+      .fa
+        font-size: 20px
+        color: white
+
+      &:hover
+        .fa
+          transform: rotate(360deg)
+          transition: all 300ms $easing
+
+    &-facebook
+      &:hover
+        background: #3B5998
+
+    &-twitter
+      &:hover
+        background: #33ccff
+    
+    &-youtube
+      &:hover
+        background: #f00
+
+    &-instagram
+      &:hover
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)

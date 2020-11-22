@@ -27,7 +27,7 @@ mix
 
 // Compile Sass and Js
 mix
-  .sass('assets/sass/index.scss', 'css/style.css')
+  .sass('assets/scss/index.scss', 'css/style.css')
   .js('assets/js/bootstrap.js', 'js')
   .eslint({
     cache: false,
