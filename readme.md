@@ -6,8 +6,7 @@ This is a Blank Bootstrap 4 Theme for Wordpress. It uses **Laravel Mix** and bri
 * Bootstrap three-level reponsive menu ready to be used (with selectors for its styling already available in the main scss file).
 * Bootstrap pagination.
 * Bootstrap styles are compiled from sass, along with your own styles, into the standard style.css file, using laravel-mix.
-* If you use "npm run watch" Browser reloads automatically each time you edit a sass  or php file.
-* If you use "npm run hot", The browser will hot reload(you dont net to refresh the pages to see css and js changes).
+* If you use "npm run watch" Browser reloads automatically each time you edit a sass, js or php file..
 * Prettier and eslint to lint your code.
 * Avoids browser cache for style.css and scripts.js when updated.
 * Optional stylesheet for fast styling of Contact Form 7.
@@ -33,10 +32,10 @@ In App/View you can see two folder, the first one (Admin) is for make code to ad
 ### Setup
 * After installing WordPress, clone this repository within the themes directory and rename it as you wish. (It is suggested that you also update your theme's name at the beggining of `/scss/index.scss`)
 * Optional: To use this theme as a starting point for your own Wordpress project repository you may want to delete the hidden `git` directory inside the theme directory, and create a new git repo using `git init`.
-* Run `npm install` (whe recomend to use ) and composer install.
-* Create a .env file at root, then you need to write LOCAL_DOMAIN const, the value of this constant will be your virtual domain name "wp-domain.test"
-* Run `npm run watch` to start watching your files. 
-* Use the [livereload browser extension](http://livereload.com/extensions/) to have your browser automatically refreshed.
+* Run `yarn install` (tested with node 12.x and 15.x) and composer install.
+* Create a .env file at root, then you need to write LOCAL_DOMAIN const, the value of this constant will be your virtual domain name, for example "wp-domain.test"
+* Run `npm run watch` to start watching your files.
+* To see you changes you need to open the localhost url that the console gives you.
 
 ### To customize Bootstrap
 * Optionally, your can use "npm outdated" to check if it is a newer bootstrap, also you can directly remove bootstrap and then install it using "npm remove bootstrap" then "npm install bootstrap --save"
