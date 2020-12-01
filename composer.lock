@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c8f54f8289d8e6c5d3bb7fe620313ca",
+    "content-hash": "22647c6350d4d00ebe6c6a5614a698d6",
     "packages": [
         {
             "name": "mindkomm/theme-lib-mix",
@@ -41,6 +41,10 @@
                 }
             ],
             "description": "Laravel Mix functions for WordPress projects",
+            "support": {
+                "issues": "https://github.com/mindkomm/theme-lib-mix/issues",
+                "source": "https://github.com/mindkomm/theme-lib-mix/tree/1.1.0"
+            },
             "time": "2019-02-08T18:43:17+00:00"
         }
     ],
@@ -51,5 +55,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }
