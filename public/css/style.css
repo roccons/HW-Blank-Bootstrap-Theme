@@ -1,16 +1,7 @@
 @charset "UTF-8";
-/*
-  Theme Name: Blank Theme NAME
-  Theme URI: https://github.com/roccons/HW-Blank-Bootstrap-Theme
-  Author: roccons
-  Author URI: http://habitatweb.mx/
-  Description: Its a minimalistic wordpress theme
-  License: GNU General Public License v2 or later
-  License URI: http://www.gnu.org/licenses/gpl-2.0.html
-  Text Domain: hwblank
-  Tags: blank, starter, bootstrap, gulp, sass, responsive
-  **This file is generated from assets/scss/_index.css using Laravel Mix. Don't edit it directly.**
-*/
+/* Theme metadata is not registered here but in the style.css file at the root of the theme */
+/* Bootstrap personalization */
+/* Load bootstrap components styles (you can leave only those that you're using) */
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -13852,6 +13843,7 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/* These are your styles, feel free to add more files or to change them, as you find convenient */
 .navbar {
   background: white;
   padding: 16px 1rem;
@@ -14136,5 +14128,5 @@ blockquote.right {
 }
 
 * {
-  color: #1f581f;
+  color: purple;
 }
