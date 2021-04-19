@@ -206,11 +206,10 @@ class ThemeOptions {
   {
     $socialLinks = get_option( 'hw_theme_options' );
     $imgPath = IMG_PATH . '/icons/' . $name . '.svg';
-    $fieldName = $name . '_link';
 
     if( $socialLinks[$name] ) {
       echo("
-        <a href='{$socialLinks[$fieldName]}' target='_blank'>
+        <a href='{$socialLinks[$name]}' target='_blank'>
           <img src='{$imgPath}'>
         </a>
       ");
