@@ -5,8 +5,18 @@ use App\View\Admin\ThemeOptions;
 /**
  * Helper shortcut to display social_link
  */
-function social_link( $name ) {
-  ThemeOptions::socialLink( $name );
+function social_link ( $name )
+{
+  $socialLinks = get_option( 'hw_theme_options' );
+  $imgPath = IMG_PATH . '/icons/' . $name . '.svg';
+
+  if( $socialLinks[$name] ) {
+    echo("
+      <a href='{$socialLinks[$name]}' class='{$name}' alt='{$name}' target='_blank'>
+        <img src='{$imgPath}'>
+      </a>
+    ");
+  }
 }
 
 /**

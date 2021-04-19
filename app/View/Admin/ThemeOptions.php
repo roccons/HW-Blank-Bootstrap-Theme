@@ -198,24 +198,6 @@ class ThemeOptions {
   }
 
   /**
-   * Helper to render social links
-   *
-   * @param string $name
-   */
-  public static function socialLink ( String $name )
-  {
-    $socialLinks = get_option( 'hw_theme_options' );
-    $imgPath = IMG_PATH . '/icons/' . $name . '.svg';
-
-    if( $socialLinks[$name] ) {
-      echo("
-        <a href='{$socialLinks[$name]}' target='_blank'>
-          <img src='{$imgPath}'>
-        </a>
-      ");
-    }
-  }
-  /**
    * Helper to render gtm tags
    *
    * @param string $name
