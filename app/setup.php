@@ -19,9 +19,17 @@ add_action( 'wp_enqueue_scripts', function () {
     true
   );
 
-	/**
-   * Main Style (force reload of styles if it css has been updated)
+  /**
+   * Manually enqueue Gutenberg styles tu ensure they are loaded before our own styles
+   * so our css takes priority
    */
+  wp_enqueue_style(
+    'wp-block-library'
+  );
+
+  /**
+   * Main Theme Styles (force reload of styles if it css has been updated)
+  */
 	wp_enqueue_style(
     'theme-styles',
     mix( 'public/css/style.css', 'public' )
