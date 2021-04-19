@@ -18,7 +18,7 @@ use App\View\Components\BootstrapNavWalker;
 
   <body <?php body_class(isset($class) ? $class : ''); ?>>
     <header>
-      <nav class="navbar navbar-light bg-light navbar-expand-lg justify-content-between">
+      <nav class="navbar navbar-light navbar-expand-lg justify-content-between">
         <div class="container justify-content-between">
             <a class="navbar-brand" href="<?php echo home_url(); ?>">
               <img class="logo" src="<?php echo IMG_PATH ?>/logo.png" alt="<?php bloginfo( 'name' ); ?>">

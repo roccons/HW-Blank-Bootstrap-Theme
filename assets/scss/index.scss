@@ -1,6 +1,6 @@
 /* Theme metadata is not registered here but in the style.css file at the root of the theme */
 
-/* Bootstrap personalization */
+/* Bootstrap personalization and custom variables */
 @import './variables.scss';
 
 /* Load bootstrap components styles (you can leave only those that you're using) */
@@ -29,8 +29,7 @@
 
 /* These are your styles, feel free to add more files or to change them, as you find convenient */
 @import './mixins';
-@import './custom';
+@import './global';
 @import './header';
 @import './footer';
 @import './wpcf7.scss';
-@import './wpstyles.scss';

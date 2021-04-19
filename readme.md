@@ -14,20 +14,19 @@ This is a Blank Bootstrap 4 Theme for Wordpress. It uses **Laravel Mix** and bri
 * Relative URLs for image paths in posts (for portability).
 * 1 registered sidebar and 1 footer menu.
 * Theme options for storing social links, plus a helper function to show them, also you can set Google Tag Manager's ID.
-* Text editor includes buttons for adding divs and spans (for easily add classes inside your posts).
-* Visual editor shows divs and spans as outlines and a soft background color, respectively.
+* Updated for working smoothly with Gutenberg.
 
 ### Where is function.php code?
 
-We divide that code into several files wich are:
+We divide that code into several files inside app/View folder, wich are:
 
 * **Admin:** This file is for all code that is related to WP-admin, for example Theme options(Social links,GTM Id )
 * **Config:** This file is for define some constants or configuration variables, for example IMG path
 * **Filters:** This file is for make some filters
 * **Helpers:** This file is for helper functions, for example display social icons
-* **Setup:** This file is for make inicial setup
+* **Setup:** This file is for make inicial setup like the scripts and styles enquing
 
-In App/View you can see two folder, the first one (Admin) is for make code to admin panel, the diference between this folder and Admin.php is that in this folder you write the logic and in Admin.php you just invoke the classes or funciontions. The second one (Components) is for usefull components linke Navbar or Navigation.
+In app/View you can see two folder, the first one (Admin) is for make code to admin panel, the diference between this folder and Admin.php is that in this folder you write the logic and in Admin.php you just invoke the classes or funciontions. The second one (Components) is for usefull components linke Navbar or Navigation.
 
 ### Setup
 * After installing WordPress, clone this repository within the themes directory and rename the created folder as you wish. (It is suggested that you also update your theme's name at the beggining of the `index.css` file)

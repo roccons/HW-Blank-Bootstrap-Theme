@@ -1,110 +1,46 @@
-// Custom spacers and sizes
-$pad-1: 4px;
-$pad-2: 8px;
-$pad-3: 12px;
-$pad-4: 16px;
-$pad-5: 24px;
-$pad-6: 32px;
-$pad-7: 48px;
-$pad-8: 64px;
-$pad-9: 96px;
-$pad-10: 128px;
-$pad-11: 192px;
-$pad-12: 256px;
-$pad-13: 384px;
-$pad-14: 512px;
-$pad-15: 640px;
-$pad-16: 768px;
-
-$spacers: (
-  1: $pad-1,
-  2: $pad-2,
-  3: $pad-3,
-  4: $pad-4,
-  5: $pad-5,
-  6: $pad-6,
-  7: $pad-7,
-  8: $pad-8,
-  9: $pad-9,
-  10: $pad-10,
-  11: $pad-11,
-  12: $pad-12,
-  13: $pad-13,
-  14: $pad-14,
-  15: $pad-15,
-  16: $pad-16,
-);
-
-$sizes: $spacers;
+/*
+ * You can copy paste from main bootstrap _variables file any varaibles that you want to customize
+ * remember that you should remove the !default part to ensure that your values take preference
+ * over the default ones
+*/
 
 // Colors
 
-$redwine: #520021;
-$redwine-dark: #380016;
-$purple: #9f0040;
-$orange: #f60;
-$green: #85bb34;
-$green-dark: #397312;
+$base-color: #4c4846;
 
-// Social colors
-$facebook: #3B5998;
-$twitter: #33ccff;
-$instagram: #d6249f;
+$primary:       #007bff;
+$secondary:     #6c757d;
+$success:       #28a745;
+$info:          #17a2b8;
+$warning:       #ffc107;
+$danger:        #dc3545;
+$light:         #f8f9fa;
+$dark:          #343a40;
 
-$colors: (
-  'redwine': $redwine,
-  'redwine-dark': $redwine-dark,
-  'purple': $purple,
-  'orange': $orange,
-  'green': $green,
-  'green-dark': $green-dark,
-  'facebook': $facebook,
-  'twitter': $twitter,
-  'instagram': $instagram
-);
+$body-bg-color: #f7f8fc;
 
-$theme-colors: $colors;
-
-$primary: $redwine;
-$secondary: $purple;
-$success: $green;
-
-$gray-800: #4c4846;
+$link-color:        $primary;
+$link-hover-color:  darken($link-color, 15%);
 
 // Fonts
 
-$rfs-base-font-size: 1.125rem;
-
-$font-size-base: 1.25rem;
+$font-size-base: 1rem;
 $font-size-lg: $font-size-base * 1.125;
 
-$font-primary: 'Yanone Kaffeesatz', sans-serif;
-$font-secondary: 'Zilla Slab', sans-serif;
+$font-primary: sans-serif;
+$font-secondary: serif;
 
-$font-family-base: $font-secondary;
+$font-family-base: $font-primary;
 $headings-font-family: $font-primary;
-$headings-font-weight: 400;
 
-$h1-font-size: 2.5rem;
-$h2-font-size: 2rem;
-$h3-font-size: 1.75rem;
-$h4-font-size: 1.5rem;
-$h5-font-size: 1.25rem;
-$h6-font-size: 1rem;
-
-$display1-weight: 400;
-$display2-weight: 400;
-$display3-weight: 400;
-$display4-weight: 400;
+$h1-font-size: $font-size-base * 2.3;
+$h2-font-size: $font-size-base * 2.0;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.2;
+$h5-font-size: $font-size-base;
+$h6-font-size: $font-size-base * 0.85;
 
 $enable-responsive-font-sizes: true;
-
-$body-color: $gray-800;
-$body-bg: #f7f8fc;
-
-$link-color: $secondary;
-$link-hover-color: $success;
-$link-hover-decoration: none;
 
 // Misc
 

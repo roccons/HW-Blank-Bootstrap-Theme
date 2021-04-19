@@ -21,7 +21,7 @@ get_header(); ?>
 			<?php else : ?>
 
 			<div class="alert alert-info">
-			  <strong>No content in this loop</strong>
+			  <strong>No hay contenido para mostrar</strong>
 			</div>
 
 			<?php endif; ?>
