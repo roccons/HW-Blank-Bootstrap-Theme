@@ -1,6 +1,6 @@
-# HW Blank Bootstrap 4 Wordpress Theme (Laravel Mix + Sass powered)
+# HW Blank Bootstrap 4 Wordpress Theme
 
-This is a Blank Bootstrap 4 Theme for Wordpress. It uses **Laravel Mix** and brings the possibility to recompile  Bootstrap css from **Sass**. It also has various other features aimed to have a **fast and clean start** on the theme and website development. It's aim is to be as simple and small as possible. Contributions in the direction of having a cleaner and more efficient theme would be greately welcome!
+This is a Blank Bootstrap 4 Theme for Wordpress, using Sass for styles and compiling with Laravel Mix. Its only purpose is to have a **fast and clean start** on the theme and website development. Contributions are welcome!
 
 ### Main features
 * Bootstrap three-level reponsive menu ready to be used (TO-DO: restore selectors and multilevel behaviour).
@@ -13,7 +13,8 @@ This is a Blank Bootstrap 4 Theme for Wordpress. It uses **Laravel Mix** and bri
 * Includes generic logo and favicon, to be replaced with the real ones (It's recommended to use [favicomatic](http://www.favicomatic.com/) to generate the favicon variations).
 * Relative URLs for image paths in posts (for portability).
 * 1 registered sidebar and 1 footer menu.
-* Theme options for storing social links, plus a helper function to show them, also you can set Google Tag Manager's ID.
+* Theme options for storing social links, plus a helper function to insert them.
+* Built-in Google Tag Manager support.
 * Improved code organization using an `app` folder for all the business logic and `public` for all the final and compiled files.
 * Updated for working smoothly with Gutenberg.
 
@@ -44,11 +45,3 @@ In `app/View` you can see two folder, the first one (Admin) is for make code to 
 * To use the bootstrap variables you just need to include the variables you want in your theme's `/scss/_variables.scss`. The full variables source file is located in `../node_modules/bootstrap/scss/_variables.scss`.
 * Don't forget to check the [Bootstrap 4 docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/).
 * To optimize your final Bootstrap css you can comment every import that you don't use.
-
-### Credits
-* The starting point for this theme was [this 3sparks's theme](https://github.com/sebastienb/Bootstrap-3-blank-wordpress-theme). 
-* [Code for nav menu](https://github.com/jprieton/wp-bootstrap4-navwalker).
-Adding [this modifications](https://github.com/jprieton/wp-bootstrap4-navwalker/issues/5) for multi level menu support (only 3) 
-* [Relative Image URL's](http://scottwernerdesign.com/plugins/relative-image-urls).
-* Using [the function of this post](http://fellowtuts.com/twitter-bootstrap/wordpress-pagination-bootstrap-4-style/)
-for Bootstrap Pagination
