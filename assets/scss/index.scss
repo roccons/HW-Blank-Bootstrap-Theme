@@ -28,8 +28,8 @@
 @import "~bootstrap/scss/print.scss";
 
 /* These are your styles, feel free to add more files or to change them, as you find convenient */
-@import './mixins';
-@import './global';
-@import './header';
-@import './footer';
+@import './mixins.scss';
+@import './global.scss';
+@import './header.scss';
+@import './footer.scss';
 @import './wpcf7.scss';
