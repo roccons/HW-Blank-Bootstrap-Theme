@@ -6,3 +6,7 @@ Thumbs.db
 node_modules/
 vendor/
 .env
+
+public/css/style.css
+public/js/bootstrap.js
+public/mix-manifest.json

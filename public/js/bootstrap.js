@@ -15889,8 +15889,8 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /opt/lampp/htdocs/wp-blank/wp-content/themes/hw-blank-theme/assets/js/bootstrap.js */"./assets/js/bootstrap.js");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/wp-blank/wp-content/themes/hw-blank-theme/assets/scss/index.scss */"./assets/scss/index.scss");
+__webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/hw-blank/wp-content/themes/hw-blank-theme/assets/js/bootstrap.js */"./assets/js/bootstrap.js");
+module.exports = __webpack_require__(/*! /Applications/XAMPP/xamppfiles/htdocs/hw-blank/wp-content/themes/hw-blank-theme/assets/scss/index.scss */"./assets/scss/index.scss");
 
 
 /***/ })
