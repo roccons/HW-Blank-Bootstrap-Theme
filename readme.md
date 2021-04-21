@@ -23,10 +23,16 @@ This is a Blank Bootstrap 4 Theme for Wordpress, using Sass for styles and compi
 * Optional: To use this theme as a starting point for your own Wordpress project repository you may want to delete the hidden `git` directory inside the theme directory, and create a new git repo using `git init`.
 * Run `yarn install` to install bootstrap, browser-sync and many other dependencies (tested with node version 14)
 * Run `composer install`.
-* Create a `.env` file at root of your theme, then you need to write LOCAL_DOMAIN const, the value of this constant will be your virtual domain name, for example "wp-domain.test" (A `.env.example` file is included).
+* Create a `.env` by creating a copy of `.env.example` and set LOCAL_DOMAIN with the correct value for your virtual domain.
 * Run `npm run watch` to start watching your files.
 * To see you changes you need to open in the browser the "Local" URL that the console gives to you (not the virtual domain), for example "http://localhost:3000".
 * Open the file `assets/scss/index.scss` to start creating your theme styles.
+
+#### Troubleshooting
+
+* If you have errors when compiling with `npm run watch`, check your node version (and that you have already installed node modules).
+* If it compiles correctly but doesn't show your local URL it means that you haven't created the `.env` file.
+* If it compiles correctly but the local URL doesn't open you have a problem with your virtual domain.
 
 #### Where is function.php code?
 
