@@ -1,6 +1,6 @@
 # HW Blank Bootstrap 4 Wordpress Theme
 
-This is a Blank Bootstrap 4 Theme for Wordpress, using Sass for styles and compiling with Laravel Mix. Its only purpose is to have a **fast and clean start** on the theme and website development. Contributions are welcome!
+This is a Starter theme for WordPress, using Bootstrap 4 and Sass, compiled with Laravel Mix. Its only purpose is to have a **fast and clean start** on the theme and website development without any default styling. Contributions are welcome!
 
 ### Main features
 * Bootstrap three-level reponsive menu ready to be used (TO-DO: restore selectors and multilevel behaviour).
