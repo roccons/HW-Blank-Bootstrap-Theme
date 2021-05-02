@@ -3,7 +3,9 @@
 /* Bootstrap personalization and custom variables */
 @import './variables.scss';
 
-/* Load bootstrap components styles (you can leave only those that you're using) */
+/* Load bootstrap components styles (you can replace the following import with 
+* the imports for the specific scss of the components that you're using) 
+*/
 @import "~bootstrap/scss/bootstrap";
 
 /* These are your styles, feel free to add more files or to change them, as you find convenient */

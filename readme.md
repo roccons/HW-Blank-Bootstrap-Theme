@@ -10,7 +10,7 @@ This is a Starter theme for WordPress, using Bootstrap 5 and Sass, compiled with
 * Prettier and eslint to lint your code.
 * Avoids browser cache for style.css and scripts.js when updated.
 * Optional stylesheet for fast styling of Contact Form 7.
-* Includes generic logo and favicon, to be replaced with the real ones (It's recommended to use [favicomatic](http://www.favicomatic.com/) to generate the favicon variations).
+* Includes generic logo and favicon, to be replaced with the real ones (There're out there several tools like [favicomatic](http://www.favicomatic.com/) to generate the favicon variations).
 * Relative URLs for image paths in posts (for portability).
 * 1 registered sidebar and 1 footer menu.
 * Theme options for storing social links, plus a helper function to insert them.
@@ -47,7 +47,7 @@ We divided that code into several files inside app folder, wich are:
 In `app/View` you can see two folder, the first one (Admin) is for make code to admin panel, the diference between this folder and Admin.php is that in this folder you write the logic and in Admin.php you just invoke the classes or funciontions. The second one (Components) is for usefull components linke Navbar or Navigation.
 
 #### To customize Bootstrap
-* Optionally, your can use `npm outdated` or `yarn outdated` to check if it is a newer bootstrap.
+* Optionally, your can use `npm outdated` to check if it is a newer bootstrap.
 * To use the bootstrap variables you just need to include the variables you want in your theme's `/scss/_variables.scss`. The full variables source file is located in `../node_modules/bootstrap/scss/_variables.scss`.
-* Don't forget to check the [Bootstrap 4 docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/).
+* Don't forget to check the [Bootstrap 5 docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
 * To optimize your final Bootstrap css you can comment every import that you don't use.

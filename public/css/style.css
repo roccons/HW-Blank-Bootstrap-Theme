@@ -6,7 +6,9 @@
  * remember that you should remove the !default part to ensure that your values take preference
  * over the default ones
 */
-/* Load bootstrap components styles (you can leave only those that you're using) */
+/* Load bootstrap components styles (you can replace the following import with 
+* the imports for the specific scss of the components that you're using) 
+*/
 /*!
  * Bootstrap v5.0.0-beta3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
