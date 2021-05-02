@@ -1,4 +1,9 @@
 <?php
+/**
+ * The content that usually goes on this file is organized in several files
+ * inside the 'app' folder
+ */
+
 
 /**
  * Register The Auto Loader

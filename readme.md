@@ -3,9 +3,10 @@
 This is a Starter theme for WordPress, using Bootstrap 5 and Sass, compiled with Laravel Mix. Its only purpose is to have a **fast and clean start** on the theme and website development without any default styling. Contributions are welcome!
 
 ### Main features
-* Bootstrap three-level reponsive menu ready to be used (TO-DO: restore selectors and multilevel behaviour).
-* Bootstrap pagination.
+* No predefined styles, that's why it's a blank theme.
 * Bootstrap styles are compiled from sass, along with your own styles, into a style.css file, using laravel-mix.
+* Bootstrap reponsive menu.
+* Bootstrap pagination.
 * If you use `npm run watch` Browser reloads automatically each time you edit a sass, js or php file..
 * Prettier and eslint to lint your code.
 * Avoids browser cache for style.css and scripts.js when updated.
@@ -44,7 +45,7 @@ We divided that code into several files inside app folder, wich are:
 * helpers: This file is for helper functions, for example display social icons
 * setup: This file is for make inicial setup like scripts and styles enqueuing and loading external fonts.
 
-In `app/View` you can see two folder, the first one (Admin) is for make code to admin panel, the diference between this folder and Admin.php is that in this folder you write the logic and in Admin.php you just invoke the classes or funciontions. The second one (Components) is for usefull components linke Navbar or Navigation.
+In `app/View` you can see two folders, the first one (Admin) is for make code to admin panel, the diference between this folder and Admin.php is that in this folder you write the logic and in Admin.php you just invoke the classes or funciontions. The second one (Components) is for usefull components linke Navbar or Navigation.
 
 #### To customize Bootstrap
 * Optionally, your can use `npm outdated` to check if it is a newer bootstrap.

@@ -1,4 +1,11 @@
 <?php
+/**
+* index.php is the most generic WordPress template,
+* you can add more specific template files as you need, 
+* according to the WordPress template hierarchy
+* https://developer.wordpress.org/themes/basics/template-hierarchy/
+*/
+
 
 use App\View\Components\BootstrapPagination;
 
