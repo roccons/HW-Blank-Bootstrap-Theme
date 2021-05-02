@@ -4,28 +4,7 @@
 @import './variables.scss';
 
 /* Load bootstrap components styles (you can leave only those that you're using) */
-@import "~bootstrap/scss/functions.scss";
-@import "~bootstrap/scss/variables.scss";
-@import "~bootstrap/scss/mixins.scss";
-@import "~bootstrap/scss/root.scss";
-@import "~bootstrap/scss/reboot.scss";
-@import "~bootstrap/scss/type.scss";
-@import "~bootstrap/scss/images.scss";
-@import "~bootstrap/scss/code.scss";
-@import "~bootstrap/scss/grid.scss";
-@import "~bootstrap/scss/tables.scss";
-@import "~bootstrap/scss/forms.scss";
-@import "~bootstrap/scss/buttons.scss";
-@import "~bootstrap/scss/transitions.scss";
-@import "~bootstrap/scss/custom-forms.scss";
-@import "~bootstrap/scss/nav.scss";
-@import "~bootstrap/scss/navbar.scss";
-@import "~bootstrap/scss/card.scss";
-@import "~bootstrap/scss/tooltip.scss";
-@import "~bootstrap/scss/tables.scss";
-@import "~bootstrap/scss/modal.scss";
-@import "~bootstrap/scss/utilities.scss";
-@import "~bootstrap/scss/print.scss";
+@import "~bootstrap/scss/bootstrap";
 
 /* These are your styles, feel free to add more files or to change them, as you find convenient */
 @import './mixins.scss';

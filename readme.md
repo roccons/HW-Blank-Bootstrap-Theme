@@ -1,6 +1,6 @@
-# HW Blank Bootstrap 4 Wordpress Theme
+# HW Blank Bootstrap 5 Wordpress Starter Theme
 
-This is a Starter theme for WordPress, using Bootstrap 4 and Sass, compiled with Laravel Mix. Its only purpose is to have a **fast and clean start** on the theme and website development without any default styling. Contributions are welcome!
+This is a Starter theme for WordPress, using Bootstrap 5 and Sass, compiled with Laravel Mix. Its only purpose is to have a **fast and clean start** on the theme and website development without any default styling. Contributions are welcome!
 
 ### Main features
 * Bootstrap three-level reponsive menu ready to be used (TO-DO: restore selectors and multilevel behaviour).
@@ -21,7 +21,7 @@ This is a Starter theme for WordPress, using Bootstrap 4 and Sass, compiled with
 ### Setup
 * After installing WordPress, clone this repository within the themes directory and rename the created folder as you wish. (It is suggested that you also update your theme's name at the beggining of the `index.css` file)
 * Optional: To use this theme as a starting point for your own Wordpress project repository you may want to delete the hidden `git` directory inside the theme directory, and create a new git repo using `git init`.
-* Run `yarn install` to install bootstrap, browser-sync and many other dependencies (tested with node version 14)
+* Run `npm install` to install bootstrap, browser-sync and many other dependencies (tested with node version 14)
 * Run `composer install`.
 * Create a `.env` by creating a copy of `.env.example` and set LOCAL_DOMAIN with the correct value for your virtual domain.
 * Run `npm run watch` to start watching your files.
