@@ -3,16 +3,26 @@
   "type": "project",
   "description": "This is a blank Bootstrap 4 starter theme for WordPress. It uses Gulp and allows you to recompile Bootstrap css from Sass. It's focused on minimalism. If you're looking for a full-feature starter theme maybe 'sage' is a better option.",
   "keywords": [
-      "Wordpress",
-      "Blank Theme"
+    "Wordpress",
+    "Blank Theme"
   ],
   "license": "MIT",
   "require": {
-      "mindkomm/theme-lib-mix": "^1.1"
+    "mindkomm/theme-lib-mix": "^1.1"
   },
   "autoload": {
     "psr-4": {
       "App\\": "app/"
+    }
+  },
+  "repositories": [{
+    "type": "composer",
+    "url": "https://wpackagist.org"
+  }],
+  "extra": {
+    "installer-paths": {
+      "../../plugins/{$name}/": ["type:wordpress-plugin"],
+      "../../themes/{$name}/": ["type:wordpress-theme"]
     }
   }
 }
